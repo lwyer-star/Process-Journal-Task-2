@@ -1,5 +1,7 @@
-theme: jekyll-theme-modernisttheme: jekyll-theme-modernist
+theme: jekyll-theme-modernist
 
-title: Process Journal
+title: Liam Wyer – Process Journal
 author: Liam Wyer
-description: A journal documenting my process throughout the DES222 Task 2
+description: A journal documenting my process throughout DES222 Task 2.
+url: "https://lwyer-star.github.io"           # your user site
+baseurl: "/Process-Journal-Task-2"            # your repo name (project page)
