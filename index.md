@@ -2,9 +2,10 @@
 layout: default
 title: Liam Wyer – Process Journal (DES222)
 ---
+**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](./weeks/week6) · [Week 7](./weeks/week7) · [Week 8](./weeks/week8) · [Week 9](./weeks/week9)
 
-> **Author:** {{ site.author }}  
-> **Summary:** {{ site.description }}
+> **Author:** Liam. J. Wyer  
+> **Summary:** "My DES222 responsive technology journey from concept to prototype—what I tried, what worked, and why."
 
 # Week 6 — First Entry
 …your content…
