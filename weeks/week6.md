@@ -7,6 +7,27 @@ title: Week 6 — Ideation & framing
 
 # Week 6 — Ideation & framing
 
+## Early Brainstorming
+
+![Post-it brainstorm](../assets/images/week6-brainstorm.jpg)  
+*Figure 1. Initial brainstorm using post-it notes to capture raw ideas across human, animal, environmental, and community factors.*
+
+*Reflection:*  
+The post-it brainstorm was a fast way to throw out lots of raw ideas without worrying about feasibility. It helped me surface themes around animal wellbeing, human safety, environmental conditions, and community use. Seeing everything laid out visually also made it easier to notice overlaps. This messy stage gave me a starting point to organise ideas more systematically.
+
+---
+
+## Mind Map
+
+![Mind map](../assets/images/week6-mindmap.jpg)  
+*Figure 2. Mind map of early ideas with guiding questions (e.g. “What makes a run unsafe?”) showing exploration across Human, Animal, Community, and Environmental branches.*
+
+*Reflection:*  
+The mind map let me take those scattered post-it ideas and group them into four clear categories: Human, Animal, Community, and Environment. Adding guiding questions under each branch helped me push the ideas further and check which directions had depth. For example, asking “What thresholds make a run unsafe?” pointed me toward environmental data, while “Which biometrics are realistic to capture?” highlighted body temperature as a possible input. This process narrowed my focus to a project that combines multiple branches rather than just one.
+
+---
+
+
 ## Idea Card
 **Adaptive Run Companion – Liam Wyer**  
 Most likely a solo project.  
