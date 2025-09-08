@@ -8,14 +8,15 @@ title: Week 6 — Ideation & framing
 # Week 6 — Ideation & framing
 
 ## Idea Card
-**Adaptive Run Companion – Liam W**  
+**Adaptive Run Companion – Liam Wyer**  
 Most likely a solo project.  
 **Form** – Mobile app (possible wearable extension)  
 **Configuration** – Human + Nonhuman (shared run)  
-**Input** – GPS, weather/AQI APIs, pace/movement  
-**Output** – Advisory feedback  
+**Inputs** – GPS location, pace/movement data, weather + air quality API, and optional body temperature (dog)  
+**Outputs** – Advisory feedback via on-screen banner alerts (e.g. *“Good to run”*, *“Shorten route”*, *“Slow + water break”*)
+  
 
-This is a responsive running companion for people and their dogs. It adapts runs to heat/humidity/AQI with suggestions to slow, shorten, or take water. If pace is steady, it encourages continuing. Future: anonymous “busy time” alerts with strict privacy.
+This is a responsive running companion for people and their dogs. It adapts runs to heat/humidity/AQI with suggestions to slow, shorten or take water. If pace is steady, it encourages continuing. Future: anonymous “busy time” alerts with strict user preference based privacy.
 
 ---
 
@@ -26,9 +27,15 @@ This is a responsive running companion for people and their dogs. It adapts runs
 - **Design intent:** Provide adaptive, context-aware advice that keeps both human and dog safer and more comfortable during runs.
 
 ## Concept Directions
-1. **Direction A — Adaptive Run Companion (mobile web):** GPS + weather/AQI → adjust pacing; suggest water/shade breaks.  
-2. **Direction B — Community-aware alerts:** anonymous, privacy-safe “busy/heat” pings aggregated by area/time to recommend quieter/cooler windows.  
-3. **Direction C — Wearable harness add-on (later):** optional harness sensor to refine fatigue/overheating cues.  
+1. **Direction A — Adaptive Run Companion (mobile web):**  
+   Uses GPS + weather/AQI + optional body temperature (dog) to adjust pacing and suggest water/shade breaks. Provides banner alerts such as *“Slow down + water break”* or *“Shorten route”*.
+
+2. **Direction B — Community-aware alerts:**  
+   Collects anonymous, privacy-safe “busy/heat” pings aggregated by area and time to recommend quieter/cooler windows. Only activates if multiple users contribute, protecting privacy.
+
+3. **Direction C — Wearable harness add-on (later):**  
+   Optional dog harness sensor to refine fatigue/overheating cues. Could directly feed body temperature or movement data into the app for more accurate alerts.
+ 
 
 *Selected:* **A** for Week 9 demo; **B** as a light extension.
 

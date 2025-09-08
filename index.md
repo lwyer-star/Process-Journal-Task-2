@@ -5,14 +5,14 @@ title: Liam Wyer – Process Journal (DES222)
 **Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](./weeks/week6) · [Week 7](./weeks/week7) · [Week 8](./weeks/week8) · [Week 9](./weeks/week9)
 
 > **Author:** Liam. J. Wyer  
-> **Summary:** "My DES222 responsive technology journey from concept to prototype—what I tried, what worked, and why."
+> **Summary:** "My DES222 responsive technology journey from concept to prototype what I tried, what worked and why."
 
 # Week 6 — First Entry
-…your content…
+…My content…
 
 
 Welcome to my process journal for **DES222 Task 2**.  
-This will document my steps, experiments, and reflections as I work through responsive technology design.
+This will document my steps, experiments and reflections as I work through responsive technology design.
 
 ---
 
