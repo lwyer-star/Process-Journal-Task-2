@@ -45,15 +45,64 @@ The step forward and planned focus this week is turning Week 7 research into a w
 ### Materials & lightweight BOM (prototype)
 
 #### Soft-goods (pouch + attachment)
-| Part | Example spec | Purpose | Est. weight |
-|---|---|---|---|
-| Breathable mesh or spacer fabric | 2–3 mm 3D spacer knit or sports mesh | Ventilated pouch so heat doesn’t trap | ~3–6 g |
-| Backing fabric | Nylon or polyester ripstop, 150–210 D | Gives structure; easy to sew | ~3–5 g |
-| Hook-and-loop (Velcro) | 20–25 mm width, sew-on | Removable pouch + adjustable mount | ~2–4 g |
-| Webbing strap | 20–25 mm width | Anchor to existing harness straps | ~2–3 g |
-| Elastic binding / edge tape | 15–20 mm | Round edges; comfort against fur | ~1–2 g |
-| Reflective tape | 10–15 mm | Night visibility | <1 g |
-| Snaps or bar-tacks | Plastic snaps or dense stitches | Secondary safety retention | negligible |
+
+<div class="table-wrap">
+<table class="bom">
+  <thead>
+    <tr>
+      <th>Part</th>
+      <th>Example spec</th>
+      <th>Purpose</th>
+      <th>Est. weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Breathable mesh or spacer fabric</td>
+      <td>2–3&nbsp;mm 3D spacer knit or sports mesh</td>
+      <td>Ventilated pouch so heat doesn’t trap</td>
+      <td>~3–6&nbsp;g</td>
+    </tr>
+    <tr>
+      <td>Backing fabric</td>
+      <td>Nylon or polyester ripstop, 150–210&nbsp;D</td>
+      <td>Gives structure; easy to sew</td>
+      <td>~3–5&nbsp;g</td>
+    </tr>
+    <tr>
+      <td>Hook-and-loop (Velcro)</td>
+      <td>20–25&nbsp;mm width, sew-on</td>
+      <td>Removable pouch + adjustable mount</td>
+      <td>~2–4&nbsp;g</td>
+    </tr>
+    <tr>
+      <td>Webbing strap</td>
+      <td>20–25&nbsp;mm width</td>
+      <td>Anchor to existing harness straps</td>
+      <td>~2–3&nbsp;g</td>
+    </tr>
+    <tr>
+      <td>Elastic binding / edge tape</td>
+      <td>15–20&nbsp;mm</td>
+      <td>Round edges; comfort against fur</td>
+      <td>~1–2&nbsp;g</td>
+    </tr>
+    <tr>
+      <td>Reflective tape</td>
+      <td>10–15&nbsp;mm</td>
+      <td>Night visibility</td>
+      <td>&lt;1&nbsp;g</td>
+    </tr>
+    <tr>
+      <td>Snaps or bar-tacks</td>
+      <td>Plastic snaps or dense stitches</td>
+      <td>Secondary safety retention</td>
+      <td>negligible</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 
 **Pouch guideline:** internal cavity ≈ **45 × 45 × 12 mm** (fits a tiny “puck” + coin cell). Seam allowance 6–8 mm. Two mesh vents on opposing sides.
 
