@@ -16,7 +16,6 @@ title: Liam Wyer – Process Journal (DES222)
 ---
 
 ## About this journal
-“My DES222 responsive technology journey from concept to prototype what I tried, what worked and why.”
 
 This site documents my DES222 Task 2 process from early ideation through to a working prototype. Each week includes artefacts (mind map, brainstorms, sketches, tests) and short reflections on decisions made.
 ---

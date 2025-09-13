@@ -11,9 +11,9 @@ title: Week 7 — Related works & research
 1. **Crowd heatmaps in running apps** — pattern for time/zone-based density; informs my anonymous “busy time” idea.
 ![Strava heatmap](../assets/images/week7-heatmap.jpg)  
 *Strava Global Heatmap showing running and cycling activity across Brisbane and surrounding areas.*
-The Strava Global Heatmap visualises where users run and cycle most often. Each line on the map represents GPS traces from thousands of workouts uploaded by Strava users. Brighter and denser blue lines indicate **heavily used routes**, while fainter lines show **less popular paths**. This kind of crowd-sourced data helps identify safe, well-travelled areas or highlight quieter routes depending on a runner’s needs.  
+The Strava Global Heatmap visualises where users run and cycle most often. Each line on the map represents GPS traces from thousands of workouts uploaded by Strava users. Brighter and denser blue lines indicate heavily used routes, while fainter lines show less popular paths. This kind of crowd-sourced data helps identify safe, well-travelled areas or highlight quieter routes depending on a runner’s needs.  
 
-This inspired my idea of giving runners a “busy time” or “quiet path” alert, since density information can shape decisions about when and where to run. However, Strava’s 2018 heatmap also revealed sensitive military base locations because even anonymised data can still expose private patterns when zoomed in (Hsu, 2018). This highlighted for me the importance of only using **coarse, aggregated data** in my project, never precise trails or individual locations.
+This inspired my idea of giving runners a “busy time” or “quiet time” alert, since density information can shape decisions about when and where to run. However, Strava’s 2018 heatmap also revealed sensitive military base locations because even anonymised data can still expose private patterns when zoomed in (Hsu, 2018). This highlighted for me the importance of only using coarse, aggregated data in my project, never precise trails or individual locations.
     
 2. **Pet wearables (general)** — mostly health logging; my pivot is **shared, in-moment guidance**.
 2. **Pet wearables (FitBark vs Fi)** — devices for dog health and activity tracking.
@@ -70,21 +70,34 @@ Design implications for my project:
 
 ### Comparative table
 
-| Criterion | FitBark | Fi Smart Collar | My concept (Adaptive Run Companion) |
-|---|---|---|---|
-| Business model | One-off device purchase | Subscription for live GPS | Free/low-cost phone app |
-| Primary value | Activity/health logging | Live location recovery | Real-time safety prompts |
-| Location tracking | No live GPS | Live GPS (LTE-M) | Coarse phone geolocation only |
-| Environmental risk (heat/AQI) | Not addressed | Not addressed | Core input to guidance |
-| Data stored | Historical activity trends | Location history (service) | No trails; ephemeral state on device |
-| Privacy posture | Standard app analytics | Service account + GPS | Privacy-first; no IDs or accounts |
-| Battery impact | Low | Higher (continuous GPS) | Low (event-based checks) |
-| Cost to user | Device price | Monthly fee | No subscription |
-| Audience fit | Wellness tracking | Anti-lost, safety perimeter | Runners with dogs seeking safe sessions |
+<div style="overflow-x:auto">
+
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>FitBark</th>
+      <th>Fi Smart Collar</th>
+      <th>My concept (Adaptive Run Companion)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Business model</td><td>One-off device purchase</td><td>Subscription for live GPS</td><td>Free/low-cost phone app</td></tr>
+    <tr><td>Primary value</td><td>Activity/health logging</td><td>Live location recovery</td><td>Real-time safety prompts</td></tr>
+    <tr><td>Location tracking</td><td>No live GPS</td><td>Live GPS (LTE-M)</td><td>Coarse phone geolocation only</td></tr>
+    <tr><td>Environmental risk (heat/AQI)</td><td>Not addressed</td><td>Not addressed</td><td>Core input to guidance</td></tr>
+    <tr><td>Data stored</td><td>Historical activity trends</td><td>Location history (service)</td><td>No trails; ephemeral on device</td></tr>
+    <tr><td>Privacy posture</td><td>Standard app analytics</td><td>Service account + GPS</td><td>Privacy-first; no IDs/accounts</td></tr>
+    <tr><td>Battery impact</td><td>Low</td><td>Higher (continuous GPS)</td><td>Low (event-based checks)</td></tr>
+    <tr><td>Cost to user</td><td>Device price</td><td>Monthly fee</td><td>No subscription</td></tr>
+    <tr><td>Audience fit</td><td>Wellness tracking</td><td>Anti-lost safety</td><td>Runners with dogs seeking safe sessions</td></tr>
+  </tbody>
+</table>
+
+</div>
 
 *(Evidence sources for later reference list: FitBark product page; Fi product page and pricing; pages accessed 13 Sep 2025.)*
 
-These devices track activity, rest, and sometimes location for dogs. They mostly provide long-term stats, but don’t offer immediate safety advice. This gap is important: my concept focuses on *real-time nudges* during a run.   
 3. **Weather/AQI risk guidance** — informs thresholds and copy for alerts.
 Government AQI dashboards and running apps sometimes give “unhealthy air” warnings. I realised I could adapt this into a simple 3-tier banner system for heat, humidity, and air quality.  
 
