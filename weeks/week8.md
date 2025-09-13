@@ -4,6 +4,45 @@
 
 The step forward and planned focus this week is turning Week 7 research into a working prototype. I sketched the UI, built a first version of the banner logic, and ran quick tests to see what works in motion.
 
+### Physical concept — harness mount (sketches)
+
+<div class="img-row">
+  <figure>
+    <img src="../assets/images/week8-harness-01.jpg" alt="Sketch of dog harness noting chest mount as hottest area for sensing">
+    <figcaption>Chest mount noted as the hottest area — good for sensing heat, but watch rubbing and airflow.</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/images/week8-harness-02.jpg" alt="Sketch of square harness panel with centred pouch made of breathable material">
+    <figcaption>Centred pouch concept in breathable/mesh fabric for a small sensor puck; removable for washing.</figcaption>
+  </figure>
+</div>
+
+<div class="img-row">
+  <figure>
+    <img src="../assets/images/week8-harness-03.jpg" alt="Sketch showing human lead attached at waist; notes about distance between runner and dog">
+    <figcaption>Runner’s lead at the waist keeps hands free; check phone↔sensor BLE range (≈1–2 m) during movement.</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/images/week8-harness-04.jpg" alt="Sketch marking likely sensor position on chest harness">
+    <figcaption>Likely sensor placement marked on chest harness. Keep edges rounded; nothing rigid over the trachea.</figcaption>
+  </figure>
+</div>
+
+<style>
+  .img-row{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0}
+  .img-row figure{flex:1 1 360px;margin:0}
+  .img-row img{width:100%;height:auto;border-radius:8px}
+  .img-row figcaption{font-size:.9rem;color:#4b5563;margin-top:6px}
+</style>
+
+#### Key decisions & questions (physical)
+- **Placement:** chest mount reads heat well; test for rubbing/comfort and airflow under fur.
+- **Attachment:** removable pouch (Velcro/MOLLE); breathable mesh; quick-release for washing.
+- **Weight & comfort:** target &lt;40 g puck, rounded edges, no hard parts on neck/shoulders.
+- **Electronics:** BLE/phone range with waist-mounted lead; event-based updates to save battery.
+- **Safety:** avoid anything rigid over the trachea; add reflective strip; no dangling straps.
+
+
 ### Sketches — early UI ideas
 <img src="../assets/images/week8-sketch-01.jpg" alt="Week 8 sketch 1: banner variations and glanceable chip" style="max-width:48%;height:auto;margin-right:1%;">
 <img src="../assets/images/week8-sketch-02.jpg" alt="Week 8 sketch 2: expanded banner with single action" style="max-width:48%;height:auto;">
