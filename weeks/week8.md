@@ -42,6 +42,49 @@ The step forward and planned focus this week is turning Week 7 research into a w
 - **Electronics:** BLE/phone range with waist-mounted lead; event-based updates to save battery.
 - **Safety:** avoid anything rigid over the trachea; add reflective strip; no dangling straps.
 
+### Materials & lightweight BOM (prototype)
+
+#### Soft-goods (pouch + attachment)
+| Part | Example spec | Purpose | Est. weight |
+|---|---|---|---|
+| Breathable mesh or spacer fabric | 2–3 mm 3D spacer knit or sports mesh | Ventilated pouch so heat doesn’t trap | ~3–6 g |
+| Backing fabric | Nylon or polyester ripstop, 150–210 D | Gives structure; easy to sew | ~3–5 g |
+| Hook-and-loop (Velcro) | 20–25 mm width, sew-on | Removable pouch + adjustable mount | ~2–4 g |
+| Webbing strap | 20–25 mm width | Anchor to existing harness straps | ~2–3 g |
+| Elastic binding / edge tape | 15–20 mm | Round edges; comfort against fur | ~1–2 g |
+| Reflective tape | 10–15 mm | Night visibility | <1 g |
+| Snaps or bar-tacks | Plastic snaps or dense stitches | Secondary safety retention | negligible |
+
+**Pouch guideline:** internal cavity ≈ **45 × 45 × 12 mm** (fits a tiny “puck” + coin cell). Seam allowance 6–8 mm. Two mesh vents on opposing sides.
+
+#### Electronics (optional “safety puck”)
+| Part | Example spec | Purpose | Est. weight |
+|---|---|---|---|
+| BLE microcontroller | nRF52840 module **or** ESP32-C3 mini | BLE link to phone; simple state machine | 3–8 g |
+| Indicator | RGB LED **or** small vibration motor | Glanceable/haptic alert | 1–3 g |
+| Battery (choose one) | **CR2032** coin cell (3 V) *or* **LiPo 150–300 mAh** (3.7 V + protection) | Power | 3 g (CR2032) / 6–8 g (LiPo) |
+| Switch | Mini slide switch | Safe power-off | <1 g |
+| Enclosure | 3D-printed TPU or ABS, filleted edges | Protects electronics; rounded comfort | 5–10 g |
+
+**Target total:** keep puck **< 40 g** including enclosure so it’s comfortable on the chest panel.
+
+#### Build steps (quick)
+1. **Pattern:** cut front mesh + back ripstop to the pouch size above; add side vents in mesh.  
+2. **Attachment:** sew hook panel to pouch back; sew loop strips to a short webbing “sleeve” that wraps the harness chest strap (Velcro-to-Velcro closure).  
+3. **Enclosure:** print a rounded case (no sharp corners), add switch access; secure with two tiny screws or snap-fit.  
+4. **Electronics:** flash simple firmware (BLE on; three states → LED/haptic); mount battery; strain-relief the wiring.  
+5. **Assembly:** insert puck into pouch; check that nothing sits over the trachea; verify it cannot twist or rub.
+
+#### Safety & sourcing notes
+- **No charging on-dog.** If you use LiPo, charge off the harness and use a protected cell.  
+- **Comfort first:** rounded edges, soft binding, nothing rigid on the neck; check for rubbing after 5–10 min.  
+- **Battery choice:** coin cell = lighter/safer but weaker haptics; small LiPo = stronger haptics but requires careful handling.  
+- **Radio range:** test phone–puck BLE at waist-to-chest distance (≈1–2 m while moving).  
+- **Maintenance:** make the pouch fully **removable** for washing; air-dry only.
+
+#### What this enables for Assessment 3
+- You can demo the **chip/banners on phone** and mirror the state on the **puck** (LED/haptic), proving the glanceable concept without complex sensing.  
+- If you later add on-dog sensing, keep it **informational only** (e.g., local temperature trend), not medical.
 
 ### Sketches — early UI ideas
 <img src="../assets/images/week8-sketch-01.jpg" alt="Week 8 sketch 1: banner variations and glanceable chip" style="max-width:48%;height:auto;margin-right:1%;">
