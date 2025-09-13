@@ -8,9 +8,11 @@ title: Week 7 — Related works & research
 # Week 7 — Related works & research
 
 ## Landscape scan
-1. **Crowd heatmaps in running apps** — pattern for time/zone-based density; informs my anonymous “busy time” idea.
+**Crowd heatmaps in running apps** — pattern for time/zone-based density; informs my anonymous “busy time” idea.
+
 ![Strava heatmap](../assets/images/week7-heatmap.jpg)  
 *Strava Global Heatmap showing running and cycling activity across Brisbane and surrounding areas.*
+
 The Strava Global Heatmap visualises where users run and cycle most often. Each line on the map represents GPS traces from thousands of workouts uploaded by Strava users. Brighter and denser blue lines indicate heavily used routes, while fainter lines show less popular paths. This kind of crowd-sourced data helps identify safe, well-travelled areas or highlight quieter routes depending on a runner’s needs.  
 
 This inspired my idea of giving runners a “busy time” or “quiet time” alert, since density information can shape decisions about when and where to run. However, Strava’s 2018 heatmap also revealed sensitive military base locations because even anonymised data can still expose private patterns when zoomed in (Hsu, 2018). This highlighted for me the importance of only using coarse, aggregated data in my project, never precise trails or individual locations.
@@ -116,10 +118,22 @@ Design notes:
 - **Tech:** Web Geolocation; Weather/AQI API; basic risk scoring.  
 - **Human/cultural:** accessibility (clear language), privacy (no trails/IDs), animal welfare.
 
-## References
-- Strava (2018). *Strava Global Heatmap Privacy Statement*. https://blog.strava.com  
-- Whistle (2023). *Whistle Health Device*. https://www.whistle.com  
-- Australian Government (2024). *Air Quality Index Categories*. https://www.environment.gov.au  
-
 ## Reflection
 The strongest leverage is timely, clear micro-advice rather than dashboards. Privacy needs to be strict to avoid creepiness; aggregation + k-anonymity feels right. This week helped me validate that my idea has a gap compared to existing products. While other tools log data or provide static dashboards, there is little real-time advice that responds to *both* human and animal needs. I also became more aware of privacy risks, so I decided to prioritise aggregation and transparency. This learning will directly inform the rules and prototype I start in Week 8.
+
+## References
+- Hsu, J. (2018) *The Strava heat map and the end of secrets*. Wired UK, 29 January. Available at: https://www.wired.com/story/strava-heat-map-military-bases-fitness-trackers-privacy (Accessed: 13 September 2025).
+
+- Strava (n.d.) *Global Heatmap*. Available at: https://www.strava.com/heatmap (Accessed: 13 September 2025).
+
+- FitBark (n.d.) *FitBark 2*. Available at: https://www.fitbark.com/ (Accessed: 13 September 2025).
+
+- Fi (n.d.) *Fi Smart Collar*. Available at: https://tryfi.com/ (Accessed: 13 September 2025).
+
+- Bureau of Meteorology (n.d.) *Heatwave Service for Australia*. Available at: http://www.bom.gov.au/australia/heatwave/ (Accessed: 13 September 2025).
+
+- Bureau of Meteorology (n.d.) *UV Index and Sun Protection Times*. Available at: http://www.bom.gov.au/uv/ (Accessed: 13 September 2025).
+
+- Department of Climate Change, Energy, the Environment and Water (n.d.) *Air quality: categories and health advice*. Available at: https://www.dcceew.gov.au/ (Accessed: 13 September 2025).
+
+
