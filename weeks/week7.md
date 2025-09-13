@@ -9,19 +9,15 @@ title: Week 7 — Related works & research
 # Week 7 — Related works & research
 
 ## Landscape scan
-**Crowd heatmaps in running apps** — pattern for time/zone-based density; informs my anonymous “busy time” idea.
 
+### Crowd heatmaps in running apps
 ![Strava heatmap](../assets/images/week7-heatmap.jpg)  
 *Strava Global Heatmap showing running and cycling activity across Brisbane and surrounding areas.*
 
-The Strava Global Heatmap visualises where users run and cycle most often. Each line on the map represents GPS traces from thousands of workouts uploaded by Strava users. Brighter and denser blue lines indicate heavily used routes, while fainter lines show less popular paths. This kind of crowd-sourced data helps identify safe, well-travelled areas or highlight quieter routes depending on a runner’s needs.  
+The Strava Global Heatmap visualises where users run and cycle most often. Each line on the map represents GPS traces from thousands of workouts uploaded by Strava users. Brighter and denser blue lines indicate heavily used routes, while fainter lines show less popular paths. This kind of crowd-sourced data helps identify safe, well-travelled areas or highlight quieter routes depending on a runner’s needs. This inspired my idea of giving runners a “busy time” or “quiet path” alert, since density information can shape decisions about when and where to run. However, Strava’s 2018 heatmap also revealed sensitive military base locations because even anonymised data can still expose private patterns when zoomed in (Hsu, 2018). This highlighted for me the importance of only using coarse, aggregated data in my project, never precise trails or individual locations.
 
-This inspired my idea of giving runners a “busy time” or “quiet time” alert, since density information can shape decisions about when and where to run. However, Strava’s 2018 heatmap also revealed sensitive military base locations because even anonymised data can still expose private patterns when zoomed in (Hsu, 2018). This highlighted for me the importance of only using coarse, aggregated data in my project, never precise trails or individual locations.
-    
 ### Pet wearables (FitBark vs Fi)
-
 These are commercially available pet wearables that owners can buy today. FitBark represents the “activity/health logger” model (up-front hardware, no subscription). Fi represents the “live GPS recovery” model (hardware plus monthly plan over LTE-M). Looking at both establishes the current baseline for features, costs and privacy trade-offs, and shows where my concept would fit. Key takeaway: neither provides real-time environmental safety guidance during a run or considers combined human + dog risk — that gap motivates my prototype.
-
 
 ![FitBark device](../assets/images/week7-fitbark.jpg)  
 *FitBark 2 — one-off purchase activity tracker focusing on health and movement stats.*
@@ -29,23 +25,20 @@ These are commercially available pet wearables that owners can buy today. FitBar
 ![Fi Smart Collar](../assets/images/week7-fi.jpg)  
 *Fi Smart Collar — subscription-based GPS tracker with LTE-M connectivity for live location.*
 
-FitBark is a one-off purchase device that tracks a dog’s activity, rest, and general health trends. It is designed for logging and longer-term insights rather than in-moment intervention.(FitBark, n.d.).
+FitBark is a one-off purchase device that tracks a dog’s activity, rest, and general health trends. It is designed for logging and longer-term insights rather than in-moment intervention (FitBark, n.d.).
 
-Fi uses a subscription model to provide live GPS tracking (LTE-M) for locating dogs in real time. This offers location safety but introduces an ongoing cost and, like most GPS devices, typically trades off battery life for continuous tracking. (Fi, n.d.).
+Fi uses a subscription model to provide live GPS tracking (LTE-M) for locating dogs in real time. This offers location safety but introduces an ongoing cost and, like most GPS devices, typically trades off battery life for continuous tracking (Fi, n.d.).
 
-Pros and cons at a glance:
-- FitBark — pros: no subscription, simple setup; cons: no live GPS and no real-time safety prompts during exercise.
+#### Pros and cons at a glance
+- FitBark — pros: no subscription, simple setup; cons: no live GPS and no real-time safety prompts during exercise.  
 - Fi — pros: live GPS for recovery/safety; cons: monthly fee and still no alerts about heat, humidity, or air-quality risk while running.
 
-Design implications for my project:
-- Focus on in-moment guidance (heat, humidity, AQI) rather than historical dashboards.
-- Keep costs low and avoid subscriptions by leveraging the user’s phone and public data sources.
+#### Design implications for my project
+- Focus on in-moment guidance (heat, humidity, AQI) rather than historical dashboards.  
+- Keep costs low and avoid subscriptions by leveraging the user’s phone and public data sources.  
 - Minimise data collection: do not store trails or IDs; use only coarse, ephemeral data needed for guidance.
 
 ### Competitive gap and what I will do differently
-
-### Competitive gap and what I will do differently
-
 1. **Real-time safety prompts, not dashboards**  
    FitBark logs activity trends and Fi focuses on location recovery. My concept gives in-moment guidance during a run based on current heat, humidity and air quality, plus simple actions (good to run / shorten route / slow + water break).
 
@@ -66,7 +59,6 @@ Design implications for my project:
 
 7. **Ethical + accessible defaults**  
    Conservative thresholds, plain language, high-contrast option, optional haptics/sound for attention, and dog-first rest/water timers.
-
 
 ### Comparative table
 
@@ -108,26 +100,30 @@ Design implications for my project:
 ![BOM heat/UV alert](../assets/images/week7-bom-heat.jpg)  
 *Bureau of Meteorology alert styles for heat/UV.*
 
-Government dashboards classify air quality and heat using simple categories that are easy to translate into running guidance. I will map these categories into a three-state banner:
+Government dashboards classify air quality and heat using simple categories that are easy to translate into running guidance. I will map these categories into a three-state banner.
 
-- Good to run — AQI in “Good”; temp/heat index below comfort threshold  
-- Shorten route — AQI “Moderate/Unhealthy for sensitive”; heat index elevated  
-- Slow + water break — AQI “Unhealthy+”; heat index high or rapid rise
+#### Banner mapping
+- **Good to run** — AQI in “Good”; heat index below comfort threshold  
+- **Shorten route** — AQI “Moderate/Unhealthy for sensitive”; heat index elevated  
+- **Slow + water break** — AQI “Unhealthy+”; heat index high or rising quickly
 
-Design notes:
-- Show an “approximate” label (nearest station ≠ exact micro-climate) and include a manual Refresh.
-- Use plain language and a single clear action; details available on expansion.
+#### Design notes
+- Show an “approximate” label (nearest station ≠ exact micro-climate) and include a manual Refresh.  
+- Use plain language and a single clear action; details available on expansion.  
 - Start conservative; tune thresholds after Week 8 tests.
+
 
 *(Screenshots to add: an AQI category chart and a BOM alert panel.)*
  
 
 ## What I’m taking forward
+
 - **Interaction patterns:** glanceable banners, progressive disclosure.  
 - **Tech:** Web Geolocation; Weather/AQI API; basic risk scoring.  
 - **Human/cultural:** accessibility (clear language), privacy (no trails/IDs), animal welfare.
 
 ## Reflection
+
 The strongest leverage is timely, clear micro-advice rather than dashboards. Privacy needs to be strict to avoid creepiness; aggregation + k-anonymity feels right. This week helped me validate that my idea has a gap compared to existing products. While other tools log data or provide static dashboards, there is little real-time advice that responds to *both* human and animal needs. I also became more aware of privacy risks, so I decided to prioritise aggregation and transparency. This learning will directly inform the rules and prototype I start in Week 8.
 
 ## References
