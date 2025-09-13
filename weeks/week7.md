@@ -100,6 +100,10 @@ Fi uses a subscription model to provide live GPS tracking (LTE-M) for locating d
 ![BOM heat/UV alert](../assets/images/week7-bom-heat.jpg)  
 *Bureau of Meteorology alert styles for heat/UV.*
 
+![BOM UV map](../assets/images/week7-bom-uv-map.jpg)  
+*Average noon clear-sky UV Index (annual), Australian Bureau of Meteorology. Included as context for UV exposure risk across Australia.*
+
+
 Government dashboards classify air quality and heat using simple categories that are easy to translate into running guidance. I will map these categories into a three-state banner.
 
 #### Banner mapping
