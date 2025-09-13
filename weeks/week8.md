@@ -1,13 +1,8 @@
----
-layout: default
-title: Week 8 — Prototyping & tests
----
-
-**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](./week6) · [Week 7](./week7) · [Week 8](./week8) · [Week 9](./week9)
+**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](./week6.md) · [Week 7](./week7.md) · [Week 8](./week8.md) · [Week 9](./week9.md)
 
 # Week 8 — Prototyping & tests
 
-The step forward and planned focus of this week is turning Week 7 research into a working prototype. I sketched the UI, built a first version of the banner logic and ran quick tests to see what works in motion.
+The step forward and planned focus this week is turning Week 7 research into a working prototype. I sketched the UI, built a first version of the banner logic, and ran quick tests to see what works in motion.
 
 ### Sketches — early UI ideas
 <img src="../assets/images/week8-sketch-01.jpg" alt="Week 8 sketch 1: banner variations and glanceable chip" style="max-width:48%;height:auto;margin-right:1%;">
@@ -28,16 +23,16 @@ I chose a chip + expandable banner pattern because it suits running (low reading
 ### Glanceable chip — what it is and why I’m using it
 
 #### What it is
-A small, always-visible UI element that compresses state into 2–3 words and a color (e.g., green “Good to run”). Tapping it expands into a short banner with the reason and a single action.
+A small, always-visible UI element that compresses state into 2–3 words and a colour (e.g., green “Good to run”). Tapping it expands into a short banner with the reason and a single action.
 
 #### Why this pattern for running
-- Minimizes reading while moving; works at arm’s length.
+- Minimises reading while moving; works at arm’s length.
 - Keeps attention on the environment, not the screen.
 - Works on both phone and potential device outputs (LED/haptic).
 
 #### Design rules I’m following
 - Content: 2–3 words max; no numbers unless essential.
-- Color + label always paired (color-blind safe); contrast ≥ 4.5:1.
+- Colour + label always paired (colour-blind safe); contrast ≥ 4.5:1.
 - Touch target ≥ 44px height; safe margins around edges.
 - One job: show state; tap to expand for the “why” + one action.
 - Idle battery use: no constant animations; only change on state updates.
@@ -48,13 +43,13 @@ A small, always-visible UI element that compresses state into 2–3 words and a 
 - Slow + water break → label “Slow + water break” (red + optional haptic).
 
 #### Accessibility and clarity
-- Color is never the only signal (text label + icon optional).
+- Colour is never the only signal (text label + icon optional).
 - Plain, verb-first language; no jargon.  
 - Announces state changes with a brief haptic (configurable) and keeps an “approximate” badge when data is from the nearest station.
 
 #### Trade-offs and mitigations
 - Chip is terse by design → mitigation: expand to banner for the reason and single recommended action.  
-- Possible over-attention to color → mitigation: bold labels, icon, and consistent wording.
+- Possible over-attention to colour → mitigation: bold labels, icon, and consistent wording.
 
 #### Live example (static demo)
 
@@ -170,7 +165,7 @@ This shows how Week 7 research (AQI categories, heat guidance) becomes a concret
 
 ---
 
-### Known issues / Workarounds
+### Known issues / workarounds
 - iOS permission prompts are inconsistent → provide a manual **Refresh** button.  
 - AQI locality mismatch → fall back to nearest station and show **approximate**.  
 - Battery: avoid continuous GPS; check on demand or when conditions change.
@@ -180,7 +175,7 @@ This shows how Week 7 research (AQI categories, heat guidance) becomes a concret
 ### Testing
 
 #### Plan
-Devices: list phones/browsers i use  
+Devices: list phones/browsers you used  
 Scenarios: hot midday, cool evening, windy day  
 Routes/locations: where you walked/ran  
 Method: short sessions; note when states switch; use Refresh; record any confusion
@@ -210,4 +205,4 @@ This is proof of responsive behaviour and informs the exact copy/threshold chang
 ---
 
 ### Reflection
-Early alerts are readable and the one-action banner keeps decisions simple during a run. The prototype also demonstrates my Week 7 stance: real-time micro-advice over dashboards, privacy by design (coarse, ephemeral data) and combined human + dog safety. Next, I’ll tune thresholds from testing, tighten the copy and polish the UI for the Week 9 wrap-up.
+Early alerts are readable, and the one-action banner keeps decisions simple during a run. The prototype also demonstrates my Week 7 stance: real-time micro-advice over dashboards, privacy by design (coarse, ephemeral data), and combined human + dog safety. Next, I’ll tune thresholds from testing, tighten the copy, and polish the UI for the Week 9 wrap-up.
