@@ -3,7 +3,8 @@ layout: default
 title: Week 7 — Related works & research
 ---
 
-**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](./week6) · [Week 7](./week7) · [Week 8](./week8) · [Week 9](./week9)
+**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](./week6.md) · [Week 7](./week7.md) · [Week 8](./week8.md) · [Week 9](./week9.md)
+
 
 # Week 7 — Related works & research
 
@@ -19,15 +20,18 @@ This inspired my idea of giving runners a “busy time” or “quiet time” al
     
 ### Pet wearables (FitBark vs Fi)
 
+These are commercially available pet wearables that owners can buy today. FitBark represents the “activity/health logger” model (up-front hardware, no subscription). Fi represents the “live GPS recovery” model (hardware plus monthly plan over LTE-M). Looking at both establishes the current baseline for features, costs and privacy trade-offs, and shows where my concept would fit. Key takeaway: neither provides real-time environmental safety guidance during a run or considers combined human + dog risk — that gap motivates my prototype.
+
+
 ![FitBark device](../assets/images/week7-fitbark.jpg)  
 *FitBark 2 — one-off purchase activity tracker focusing on health and movement stats.*
 
 ![Fi Smart Collar](../assets/images/week7-fi.jpg)  
 *Fi Smart Collar — subscription-based GPS tracker with LTE-M connectivity for live location.*
 
-FitBark is a one-off purchase device that tracks a dog’s activity, rest, and general health trends. It is designed for logging and longer-term insights rather than in-moment intervention.
+FitBark is a one-off purchase device that tracks a dog’s activity, rest, and general health trends. It is designed for logging and longer-term insights rather than in-moment intervention.(FitBark, n.d.).
 
-Fi uses a subscription model to provide live GPS tracking (LTE-M) for locating dogs in real time. This offers location safety but introduces an ongoing cost and, like most GPS devices, typically trades off battery life for continuous tracking.
+Fi uses a subscription model to provide live GPS tracking (LTE-M) for locating dogs in real time. This offers location safety but introduces an ongoing cost and, like most GPS devices, typically trades off battery life for continuous tracking. (Fi, n.d.).
 
 Pros and cons at a glance:
 - FitBark — pros: no subscription, simple setup; cons: no live GPS and no real-time safety prompts during exercise.
@@ -40,26 +44,29 @@ Design implications for my project:
 
 ### Competitive gap and what I will do differently
 
-1. Real-time safety prompts, not dashboards  
+### Competitive gap and what I will do differently
+
+1. **Real-time safety prompts, not dashboards**  
    FitBark logs activity trends and Fi focuses on location recovery. My concept gives in-moment guidance during a run based on current heat, humidity and air quality, plus simple actions (good to run / shorten route / slow + water break).
 
-2. Human + dog combined risk  
+2. **Human + dog combined risk**  
    Allow dog factors (size, age, coat, breed sensitivities) to adjust thresholds. Guidance is framed for both runner and dog.
 
-3. No subscription; phone-only  
+3. **No subscription; phone-only**  
    Use the phone’s geolocation and publicly available weather/AQI data. Keep the core experience free and lightweight.
 
-4. Privacy by design  
+4. **Privacy by design**  
    No trails or accounts. Do calculations on-device; only fetch coarse, nearest-station data. Label data as approximate and provide a manual refresh.
 
-5. Battery-friendly vs constant GPS  
+5. **Battery-friendly vs constant GPS**  
    Avoid continuous GPS like Fi. Use coarse location on demand and event-based checks (e.g., every few minutes, or when distance/conditions change).
 
-6. Clear, glanceable UI  
+6. **Clear, glanceable UI**  
    One-line status chip that expands to a short banner with the why and a single recommended action. Progressive disclosure for details.
 
-7. Ethical + accessible defaults  
+7. **Ethical + accessible defaults**  
    Conservative thresholds, plain language, high-contrast option, optional haptics/sound for attention, and dog-first rest/water timers.
+
 
 ### Comparative table
 
@@ -83,11 +90,13 @@ Design implications for my project:
     <tr><td>Privacy posture</td><td>Standard app analytics</td><td>Service account + GPS</td><td>Privacy-first; no IDs/accounts</td></tr>
     <tr><td>Battery impact</td><td>Low</td><td>Higher (continuous GPS)</td><td>Low (event-based checks)</td></tr>
     <tr><td>Cost to user</td><td>Device price</td><td>Monthly fee</td><td>No subscription</td></tr>
+    <tr><td>Availability</td><td>Shipping now</td><td>Shipping now</td><td>Prototype (phone app)</td></tr>
     <tr><td>Audience fit</td><td>Wellness tracking</td><td>Anti-lost safety</td><td>Runners with dogs seeking safe sessions</td></tr>
   </tbody>
 </table>
 
 </div>
+
 
 *(Evidence sources for later reference list: FitBark product page; Fi product page and pricing; pages accessed 13 Sep 2025.)*
 
