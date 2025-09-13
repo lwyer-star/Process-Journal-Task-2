@@ -15,15 +15,6 @@ The Strava Global Heatmap visualises where users run and cycle most often. Each 
 
 This inspired my idea of giving runners a “busy time” or “quiet time” alert, since density information can shape decisions about when and where to run. However, Strava’s 2018 heatmap also revealed sensitive military base locations because even anonymised data can still expose private patterns when zoomed in (Hsu, 2018). This highlighted for me the importance of only using coarse, aggregated data in my project, never precise trails or individual locations.
     
-2. **Pet wearables (general)** — mostly health logging; my pivot is **shared, in-moment guidance**.
-2. **Pet wearables (FitBark vs Fi)** — devices for dog health and activity tracking.
-
-![FitBark device](../assets/images/week7-fitbark.jpg)  
-*FitBark 2 — a one-off purchase activity tracker for dogs, focusing on health and movement stats.*
-
-![Fi Smart Collar](../assets/images/week7-fi.jpg)  
-*Fi Smart Collar — a subscription-based GPS tracker with LTE-M connectivity for live dog location.*
-
 ### Pet wearables (FitBark vs Fi)
 
 ![FitBark device](../assets/images/week7-fitbark.jpg)  
@@ -51,7 +42,7 @@ Design implications for my project:
    FitBark logs activity trends and Fi focuses on location recovery. My concept gives in-moment guidance during a run based on current heat, humidity and air quality, plus simple actions (good to run / shorten route / slow + water break).
 
 2. Human + dog combined risk  
-   Allow dog factors (size, age, coat, breed sensitives) to adjust thresholds. Guidance is framed for both runner and dog.
+   Allow dog factors (size, age, coat, breed sensitivities) to adjust thresholds. Guidance is framed for both runner and dog.
 
 3. No subscription; phone-only  
    Use the phone’s geolocation and publicly available weather/AQI data. Keep the core experience free and lightweight.
@@ -98,8 +89,27 @@ Design implications for my project:
 
 *(Evidence sources for later reference list: FitBark product page; Fi product page and pricing; pages accessed 13 Sep 2025.)*
 
-3. **Weather/AQI risk guidance** — informs thresholds and copy for alerts.
-Government AQI dashboards and running apps sometimes give “unhealthy air” warnings. I realised I could adapt this into a simple 3-tier banner system for heat, humidity, and air quality.  
+### Weather/AQI risk guidance
+
+![AQI categories](../assets/images/week7-aqi.jpg)  
+*Example AQI categories used by Australian agencies (Good → Hazardous).*
+
+![BOM heat/UV alert](../assets/images/week7-bom-heat.jpg)  
+*Bureau of Meteorology alert styles for heat/UV.*
+
+Government dashboards classify air quality and heat using simple categories that are easy to translate into running guidance. I will map these categories into a three-state banner:
+
+- Good to run — AQI in “Good”; temp/heat index below comfort threshold  
+- Shorten route — AQI “Moderate/Unhealthy for sensitive”; heat index elevated  
+- Slow + water break — AQI “Unhealthy+”; heat index high or rapid rise
+
+Design notes:
+- Show an “approximate” label (nearest station ≠ exact micro-climate) and include a manual Refresh.
+- Use plain language and a single clear action; details available on expansion.
+- Start conservative; tune thresholds after Week 8 tests.
+
+*(Screenshots to add: an AQI category chart and a BOM alert panel.)*
+ 
 
 ## What I’m taking forward
 - **Interaction patterns:** glanceable banners, progressive disclosure.  
