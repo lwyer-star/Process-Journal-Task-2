@@ -103,17 +103,62 @@ The step forward and planned focus this week is turning Week 7 research into a w
 </table>
 </div>
 
+<style>
+  .table-wrap{overflow-x:auto;margin:.5rem 0 1rem}
+  table.bom{width:100%;border-collapse:collapse;font-size:.95rem}
+  .bom th,.bom td{border:1px solid #e5e7eb;padding:8px 10px;vertical-align:top;text-align:left}
+  .bom thead th{background:#f7f7f7;font-weight:700}
+</style>
+
 
 **Pouch guideline:** internal cavity ≈ **45 × 45 × 12 mm** (fits a tiny “puck” + coin cell). Seam allowance 6–8 mm. Two mesh vents on opposing sides.
 
 #### Electronics (optional “safety puck”)
-| Part | Example spec | Purpose | Est. weight |
-|---|---|---|---|
-| BLE microcontroller | nRF52840 module **or** ESP32-C3 mini | BLE link to phone; simple state machine | 3–8 g |
-| Indicator | RGB LED **or** small vibration motor | Glanceable/haptic alert | 1–3 g |
-| Battery (choose one) | **CR2032** coin cell (3 V) *or* **LiPo 150–300 mAh** (3.7 V + protection) | Power | 3 g (CR2032) / 6–8 g (LiPo) |
-| Switch | Mini slide switch | Safe power-off | <1 g |
-| Enclosure | 3D-printed TPU or ABS, filleted edges | Protects electronics; rounded comfort | 5–10 g |
+
+<div class="table-wrap">
+<table class="bom">
+  <thead>
+    <tr>
+      <th>Part</th>
+      <th>Example spec</th>
+      <th>Purpose</th>
+      <th>Est. weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BLE microcontroller</td>
+      <td>nRF52840 module or ESP32-C3 mini</td>
+      <td>BLE link to phone; simple state machine</td>
+      <td>3–8&nbsp;g</td>
+    </tr>
+    <tr>
+      <td>Indicator</td>
+      <td>RGB LED or small vibration motor</td>
+      <td>Glanceable/haptic alert</td>
+      <td>1–3&nbsp;g</td>
+    </tr>
+    <tr>
+      <td>Battery (choose)</td>
+      <td>CR2032 coin cell <em>or</em> LiPo 150–300&nbsp;mAh (+ protection)</td>
+      <td>Power</td>
+      <td>3&nbsp;g (CR2032) / 6–8&nbsp;g (LiPo)</td>
+    </tr>
+    <tr>
+      <td>Switch</td>
+      <td>Mini slide switch</td>
+      <td>Safe power-off</td>
+      <td>&lt;1&nbsp;g</td>
+    </tr>
+    <tr>
+      <td>Enclosure</td>
+      <td>3D-printed TPU/ABS, filleted edges</td>
+      <td>Protects electronics; rounded comfort</td>
+      <td>5–10&nbsp;g</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 **Target total:** keep puck **< 40 g** including enclosure so it’s comfortable on the chest panel.
 
