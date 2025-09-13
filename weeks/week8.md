@@ -123,33 +123,35 @@ The prototype operationalises Week 7 decisions: real-time prompts (not logs), pr
 
 ### Risk rule v1 (draft)
 
-inputs:
+#### Inputs
+- Temperature (°C)
+- Relative humidity (%)
+- AQI PM2.5 (nearest station)
+- Optional: dog factors (size/age/coat) as a simple multiplier
 
-temperature (°C), relative humidity (%)
+#### Derived
+- `heat_index_c` — Steadman heat index computed from temperature + relative humidity
 
-AQI PM2.5 (nearest station)
-
-optional: dog factors (size/age/coat) as a simple multiplier
-
-derived:
-
-heat_index_c = Steadman HI from temp + RH
-
-decision (three states):
-
-if AQI >= 150 OR heat_index_c >= 33 → Slow + water break
-
-else if AQI >= 100 OR heat_index_c >= 30 → Shorten route
-
-else → Good to run
-
-banner copy:
-
+#### Decision (three states)
+```pseudo
+if AQI >= 150 or heat_index_c >= 33:
+    state = "Slow + water break"
+elif AQI >= 100 or heat_index_c >= 30:
+    state = "Shorten route"
+else:
+    state = "Good to run"
+Banner copy
 Good to run — Conditions look safe. Keep an easy pace; watch your dog’s breathing.
 
 Shorten route — Heat/AQI elevated. Pick a shorter loop; plan a water stop.
 
 Slow + water break — High heat/AQI. Slow down now, move to shade, give water.
+
+pgsql
+Copy code
+
+If the site strips the code block language, keep it exactly as shown (the ```pseudo fence is fine).
+::contentReference[oaicite:0]{index=0}
 
 yaml
 Copy code
