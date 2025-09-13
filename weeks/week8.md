@@ -160,6 +160,13 @@ The step forward and planned focus this week is turning Week 7 research into a w
 </table>
 </div>
 
+<style>
+  .table-wrap{overflow-x:auto;margin:.5rem 0 1rem}
+  table.bom{width:100%;border-collapse:collapse;font-size:.95rem}
+  .bom th,.bom td{border:1px solid #e5e7eb;padding:8px 10px;vertical-align:top;text-align:left}
+  .bom thead th{background:#f7f7f7;font-weight:700}
+</style>
+
 **Target total:** keep puck **< 40 g** including enclosure so it’s comfortable on the chest panel.
 
 #### Build steps (quick)
