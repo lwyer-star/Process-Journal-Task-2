@@ -17,7 +17,7 @@ title: Liam Wyer – Process Journal (DES222)
 
 ## About this journal
 
-This site documents my DES222 Task 2 process from early ideation through to a working prototype. Each week includes artefacts (mind map, brainstorms, sketches, tests) and short reflections on decisions made.
+This site documents my DES222 Task 2 process from early ideation through to a working prototype. Each week includes a part of my process and progression via research and artefacts (mind map, brainstorms, sketches, tests) also utilizing short reflections on decisions made.
 ---
 
 ## Intro Video
