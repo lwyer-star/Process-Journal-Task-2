@@ -17,7 +17,7 @@ title: Week 7 — Related works & research
 The Strava Global Heatmap visualises where users run and cycle most often. Each line on the map represents GPS traces from thousands of workouts uploaded by Strava users. Brighter and denser blue lines indicate heavily used routes, while fainter lines show less popular paths. This kind of crowd-sourced data helps identify safe, well-travelled areas or highlight quieter routes depending on a runner’s needs. This inspired my idea of giving runners a “busy time” or “quiet path” alert, since density information can shape decisions about when and where to run. However, Strava’s 2018 heatmap also revealed sensitive military base locations because even anonymised data can still expose private patterns when zoomed in (Hsu, 2018). This highlighted for me the importance of only using coarse, aggregated data in my project, never precise trails or individual locations.
 
 ### Pet wearables (FitBark vs Fi)
-These are commercially available pet wearables that owners can buy today. FitBark represents the “activity/health logger” model (up-front hardware, no subscription). Fi represents the “live GPS recovery” model (hardware plus monthly plan over LTE-M). Looking at both establishes the current baseline for features, costs and privacy trade-offs, and shows where my concept would fit. Key takeaway: neither provides real-time environmental safety guidance during a run or considers combined human + dog risk — that gap motivates my prototype.
+These are commercially available pet wearables that owners can buy today. FitBark represents the “activity/health logger” model (up-front hardware, no subscription). Fi represents the “live GPS recovery” model (hardware plus monthly plan over LTE-M). Looking at both establishes the current baseline for features, costs and privacy trade-offs and shows where my concept would fit. Key takeaway: neither provides real-time environmental safety guidance during a run or considers combined human + dog risk — that gap motivates my prototype.
 
 ![FitBark device](../assets/images/week7-fitbark.jpg)  
 *FitBark 2 — one-off purchase activity tracker focusing on health and movement stats.*
@@ -27,7 +27,7 @@ These are commercially available pet wearables that owners can buy today. FitBar
 
 FitBark is a one-off purchase device that tracks a dog’s activity, rest, and general health trends. It is designed for logging and longer-term insights rather than in-moment intervention (FitBark, n.d.).
 
-Fi uses a subscription model to provide live GPS tracking (LTE-M) for locating dogs in real time. This offers location safety but introduces an ongoing cost and, like most GPS devices, typically trades off battery life for continuous tracking (Fi, n.d.).
+Fi uses a subscription model to provide live GPS tracking (LTE-M) for locating dogs in real time. This offers location safety but introduces an ongoing cost and like most GPS devices, typically trades off battery life for continuous tracking (Fi, n.d.).
 
 #### Pros and cons at a glance
 - FitBark — pros: no subscription, simple setup; cons: no live GPS and no real-time safety prompts during exercise.  
@@ -58,7 +58,7 @@ Fi uses a subscription model to provide live GPS tracking (LTE-M) for locating d
    One-line status chip that expands to a short banner with the why and a single recommended action. Progressive disclosure for details.
 
 7. **Ethical + accessible defaults**  
-   Conservative thresholds, plain language, high-contrast option, optional haptics/sound for attention, and dog-first rest/water timers.
+   Conservative thresholds, plain language, high-contrast option, optional haptics/sound for attention and dog-first rest/water timers.
 
 ### Comparative table
 

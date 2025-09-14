@@ -2,7 +2,7 @@
 
 # Week 8 — Prototyping & tests
 
-The step forward and planned focus this week is turning Week 7 research into a working prototype. I sketched the UI, built a first version of the banner logic, and ran quick tests to see what works in motion.
+The step forward and planned focus this week is turning Week 7 research into a working prototype. I sketched the UI, built a first version of the state message logic and ran quick tests to see what works in motion.
 
 ### Physical concept — harness mount (sketches)
 
@@ -290,11 +290,12 @@ A small, always-visible UI element that compresses state into 2–3 words and a 
 ---
 
 ### Prototype screenshots
-<img src="../assets/images/week8-desktop.png" alt="Prototype desktop screen with status banner" style="max-width:48%;height:auto;margin-right:1%;">
-<img src="../assets/images/week8-mobile.png" alt="Prototype mobile screen with status banner" style="max-width:48%;height:auto;">
+<img src="../assets/images/week8-desktop.png" alt="Prototype desktop screen with status UI state message" style="max-width:48%;height:auto;margin-right:1%;">
+
+<img src="../assets/images/week8-mobile.png" alt="Prototype mobile screen with UI state message" style="max-width:48%;height:auto;">
 
 #### What this is
-First interactive prototype showing the three states: Good to run, Shorten route, Slow + water break. Includes a manual Refresh and an “approximate” label to signal nearest-station data.
+First interactive prototype showing the three UI state messages: Good to run, Shorten route, Slow + water break. Includes a manual Refresh and an “approximate” label to signal nearest-station data.
 
 #### Why I did it
 To test whether the banner is legible at a glance and whether people understand the one-line advice without needing a dashboard.
@@ -323,20 +324,23 @@ elif AQI >= 100 or heat_index_c >= 30:
     state = "Shorten route"
 else:
     state = "Good to run"
-Banner copy
-Good to run — Conditions look safe. Keep an easy pace; watch your dog’s breathing.
 
-Shorten route — Heat/AQI elevated. Pick a shorter loop; plan a water stop.
+*UI State Messages**
 
-Slow + water break — High heat/AQI. Slow down now, move to shade, give water.
+**Good to run** — Conditions look safe. Keep an easy pace; watch your dog’s breathing.
 
-What this is
+**Shorten route** — Heat/AQI elevated. Pick a shorter loop; plan a water stop.
+
+**Slow + water break** — High heat/AQI. Slow down now, move to shade, give water.
+
+**What this is**
 A first pass at turning weather and AQI into three clear states and one recommended action.
 
-Why I did it
+**Why I did it**
 To make the system testable now. Thresholds are conservative and will be tuned after trials.
 
-What it means
+**What it means**
+
 This shows how Week 7 research (AQI categories, heat guidance) becomes a concrete rule the UI can act on. It also supports the “human + dog” framing via the optional dog factor.
 
 ---
