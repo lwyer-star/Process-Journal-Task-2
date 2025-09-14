@@ -22,7 +22,7 @@ This site documents my DES222 Task 2 process from early ideation through to a wo
 
 ## Intro Video
 
-Here’s a short introduction video where I explain my project focus and approach for weeks one to 9:
+Here’s a short introduction video where I explain my project focus and approach for weeks 6 to 9:
 
 [![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
 

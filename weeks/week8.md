@@ -181,11 +181,11 @@ The step forward and planned focus this week is turning Week 7 research into a w
 - **Comfort first:** rounded edges, soft binding, nothing rigid on the neck; check for rubbing after 5–10 min.  
 - **Battery choice:** coin cell = lighter/safer but weaker haptics; small LiPo = stronger haptics but requires careful handling.  
 - **Radio range:** test phone–puck BLE at waist-to-chest distance (≈1–2 m while moving).  
-- **Maintenance:** make the pouch fully **removable** for washing; air-dry only.
+- **Maintenance:** make the pouch fully removeable for washing; air-dry only.
 
 #### What this enables for Assessment 3
-- You can demo the **chip/banners on phone** and mirror the state on the **puck** (LED/haptic), proving the glanceable concept without complex sensing.  
-- If you later add on-dog sensing, keep it **informational only** (e.g., local temperature trend), not medical.
+- You can demo the chip/banners on phone and mirror the state on the puck (LED/haptic), proving the glanceable concept without complex sensing.  
+- If you later add on-dog sensing, keep it information only (e.g., local temperature trend), not medical.
 
 ### Sketches — early UI ideas
 <img src="../assets/images/week8-sketch-01.jpg" alt="Week 8 sketch 1: banner variations and glanceable chip" style="max-width:48%;height:auto;margin-right:1%;">
@@ -313,7 +313,7 @@ The prototype operationalises Week 7 decisions: real-time prompts (not logs), pr
 - Optional: dog factors (size/age/coat) as a simple multiplier
 
 #### Derived
-- `heat_index_c` — Steadman heat index computed from temperature + relative humidity
+- heat_index_c — Steadman heat index computed from temperature + relative humidity
 
 #### Decision (three states)
 ```pseudo
@@ -330,29 +330,20 @@ Shorten route — Heat/AQI elevated. Pick a shorter loop; plan a water stop.
 
 Slow + water break — High heat/AQI. Slow down now, move to shade, give water.
 
-pgsql
-Copy code
-
-If the site strips the code block language, keep it exactly as shown (the ```pseudo fence is fine).
-::contentReference[oaicite:0]{index=0}
-
-yaml
-Copy code
-
-#### What this is
+What this is
 A first pass at turning weather and AQI into three clear states and one recommended action.
 
-#### Why I did it
+Why I did it
 To make the system testable now. Thresholds are conservative and will be tuned after trials.
 
-#### What it means
+What it means
 This shows how Week 7 research (AQI categories, heat guidance) becomes a concrete rule the UI can act on. It also supports the “human + dog” framing via the optional dog factor.
 
 ---
 
 ### Known issues / workarounds
-- iOS permission prompts are inconsistent → provide a manual **Refresh** button.  
-- AQI locality mismatch → fall back to nearest station and show **approximate**.  
+- iOS permission prompts are inconsistent → provide a manual refresh button.  
+- AQI locality mismatch → fall back to nearest station and show approximate.  
 - Battery: avoid continuous GPS; check on demand or when conditions change.
 
 ---
@@ -360,10 +351,10 @@ This shows how Week 7 research (AQI categories, heat guidance) becomes a concret
 ### Testing
 
 #### Plan
-Devices: list phones/browsers you used  
-Scenarios: hot midday, cool evening, windy day  
-Routes/locations: where you walked/ran  
-Method: short sessions; note when states switch; use Refresh; record any confusion
+**Devices**: list phones/browsers you used  
+**Scenarios**: hot midday, cool evening, windy day  
+**Routes/locations**: where you walked/ran  
+**Method: short** sessions; note when states switch; use Refresh; record any confusion
 
 #### Why I did it
 I needed evidence that the banner is seen and understood in motion, and whether copy or thresholds need changes.
