@@ -27,6 +27,10 @@ The step forward and planned focus this week is turning Week 7 research into a w
     <figcaption>Likely sensor placement marked on chest harness. Keep edges rounded; nothing rigid over the trachea.</figcaption>
   </figure>
 </div>
+<figure>
+  <img src="../assets/images/week8-pouch-pattern.jpg" alt="Sketch of pouch pattern with rounded corners and vented sides">
+  <figcaption>Pouch pattern — 45×45×12 mm cavity, rounded edges, vented sides.</figcaption>
+</figure>
 
 <style>
   .img-row{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0}
@@ -188,6 +192,17 @@ The step forward and planned focus this week is turning Week 7 research into a w
 - If you later add on-dog sensing, keep it information only (e.g., local temperature trend), not medical.
 
 ### Sketches — early UI ideas
+
+<figure>
+  <img src="../assets/images/week8-flow-map.jpg" alt="Hand-drawn flow mapping inputs to rule to three UI states">
+  <figcaption>Flow map — inputs → simple rule → three clear states.</figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/images/week8-expanded-banner.jpg" alt="Sketch of expanded banner showing reason and single action">
+  <figcaption>Expanded banner sketch — one reason + one action, no dashboard.</figcaption>
+</figure>
+
 <figure>
   <img src="../assets/images/week8-banner-state-normal.png" alt="Banner in Normal state with green status chip">
   <figcaption>Early banner prototype — <em>Normal</em> state.</figcaption>
