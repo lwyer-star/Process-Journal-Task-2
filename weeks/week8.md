@@ -188,11 +188,21 @@ The step forward and planned focus this week is turning Week 7 research into a w
 - If you later add on-dog sensing, keep it information only (e.g., local temperature trend), not medical.
 
 ### Sketches — early UI ideas
-<img src="../assets/images/week8-sketch-01.jpg" alt="Week 8 sketch 1: banner variations and glanceable chip" style="max-width:48%;height:auto;margin-right:1%;">
-<img src="../assets/images/week8-sketch-02.jpg" alt="Week 8 sketch 2: expanded banner with single action" style="max-width:48%;height:auto;">
-<br>
-<img src="../assets/images/week8-sketch-03.jpg" alt="Week 8 sketch 3: dog profile factors and water timer" style="max-width:48%;height:auto;margin-right:1%;">
-<img src="../assets/images/week8-flow.jpg" alt="Week 8 user flow: inputs → risk rule → three banner states" style="max-width:48%;height:auto;">
+<figure>
+  <img src="../assets/images/week8-banner-state-normal.png" alt="Banner in Normal state with green status chip">
+  <figcaption>Early banner prototype — <em>Normal</em> state.</figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/images/week8-banner-state-caution.png" alt="Banner in Caution state with amber status chip">
+  <figcaption>Motion test still — change to <em>Caution</em>.</figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/images/week8-banner-state-alert.png" alt="Banner in Alert state with red status chip">
+  <figcaption>Motion test still — change to <em>Alert</em> showing colour and text update.</figcaption>
+</figure>
+
 
 #### What this is
 Fast paper sketches exploring the glanceable chip, the expanded banner with one clear action, and how optional dog factors might adjust thresholds. A simple flow maps inputs → risk rule → three states.
