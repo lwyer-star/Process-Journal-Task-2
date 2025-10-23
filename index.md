@@ -13,6 +13,7 @@ title: Liam Wyer – Process Journal (DES222)
 - [Week 8 — Web APIs / Edge Devices](weeks/week8.md)
 - [Week 9 — Prototype & Testing](weeks/week9.md)
 
+
 ---
 
 ## About this journal
