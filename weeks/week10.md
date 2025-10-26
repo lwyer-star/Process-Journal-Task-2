@@ -1,4 +1,4 @@
-**Navigation:** **Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](/Process-Journal-Task-2/weeks/week6.html) · [Week 7](/Process-Journal-Task-2/weeks/week7.html) · [Week 8](/Process-Journal-Task-2/weeks/week8.html) · [Week 9](/Process-Journal-Task-2/weeks/week9.html) · [Week 10](/Process-Journal-Task-2/weeks/week10.html) · [Week 11](/Process-Journal-Task-2/weeks/week11.html)
+**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](/Process-Journal-Task-2/weeks/week6.html) · [Week 7](/Process-Journal-Task-2/weeks/week7.html) · [Week 8](/Process-Journal-Task-2/weeks/week8.html) · [Week 9](/Process-Journal-Task-2/weeks/week9.html) · [Week 10](/Process-Journal-Task-2/weeks/week10.html) · [Week 11](/Process-Journal-Task-2/weeks/week11.html)
 
 
 # Week 10 — Task 3 kickoff (refine thresholds, copy, physical feedback)
@@ -8,10 +8,10 @@ This week I start Task 3 by turning the Week 9 prototype into a tighter, testabl
 ---
 
 ### Goals (this week)
-- Tune **risk rule v2** and document exact thresholds.
+- Tune risk rule v2 and document exact thresholds.
 - Shorten banner copy (keep chip terse; move detail to expanded banner).
-- Decide and sketch one **physical feedback** pathway (LED or haptic).
-- Run two short **field checks** and log results.
+- Decide and sketch one physical feedback pathway (LED or haptic).
+- Run two short field checks and log results.
 
 ---
 
@@ -83,7 +83,7 @@ if AQI >= 150 or heat_index_c >= 33:
 elif AQI >= 100 or heat_index_c >= 30:
     state = "Shorten route"
 
-# optional dog factor: if dog_factor >= 1.05 then bump state up one level when near boundaries
+# optional dog factor: if dog_factor >= 1.05 then bump state up #one level when near boundaries
 
 
 Copy v2 (short + glanceable)
@@ -167,7 +167,3 @@ Save to `assets/images/` with these names (or your own, just keep paths consiste
 
 ---
 
-### 3) Update nav (if the top nav isn’t auto-generated)
-In **Week 9** and **index.md**, add a link to Week 10 like you’ve done for other weeks:
-```markdown
-**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](./week6.md) · [Week 7](./week7.md) · [Week 8](./week8.md) · [Week 9](./week9.md) · **[Week 10](./week10.md)**
