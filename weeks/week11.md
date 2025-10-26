@@ -1,8 +1,8 @@
-**Navigation:** **Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](/Process-Journal-Task-2/weeks/week6.html) · [Week 7](/Process-Journal-Task-2/weeks/week7.html) · [Week 8](/Process-Journal-Task-2/weeks/week8.html) · [Week 9](/Process-Journal-Task-2/weeks/week9.html) · [Week 10](/Process-Journal-Task-2/weeks/week10.html) · [Week 11](/Process-Journal-Task-2/weeks/week11.html)
+**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](/Process-Journal-Task-2/weeks/week6.html) · [Week 7](/Process-Journal-Task-2/weeks/week7.html) · [Week 8](/Process-Journal-Task-2/weeks/week8.html) · [Week 9](/Process-Journal-Task-2/weeks/week9.html) · [Week 10](/Process-Journal-Task-2/weeks/week10.html) · [Week 11](/Process-Journal-Task-2/weeks/week11.html)
 
 # Week 11 — Expanded banner & clearer actions
 
-This week I implemented the **expanded banner**: tapping the chip reveals one short **Why** and one clear **Action**. I also added a **Refresh** button and an **approximate** badge for non-local AQI.
+This week I implemented the expanded banner: tapping the chip reveals one short Why and one clear Action. I also added a Refresh button and an approximate badge for non-local AQI.
 
 ---
 
@@ -50,9 +50,9 @@ Notes: Stronger wording improved compliance; opening on demand works best.
 ---
 
 ### What I learned / next changes
-- Expanded banner should **open on demand** (tap), not automatically.
-- **Approximate** badge helps when station ≠ suburb.
-- Next: explore **physical feedback (LED)** to reduce screen glances.
+- Expanded banner should open on demand (tap), not automatically.
+- Approximate badge helps when station ≠ suburb.
+- Next: explore physical feedback (LED) to reduce screen glances.
 
 **Next week (Week 12)**
 - 2–3 field checks (cool morning vs warm arvo).  
@@ -62,5 +62,6 @@ Notes: Stronger wording improved compliance; opening on demand works best.
 ---
 
 ### Links
-- **Live demo:** [/banner-prototype/](../banner-prototype/)  
-- **Materials (BOM):** [materials.md](./materials.md)
+### Links
+- **Live demo:** [/banner-prototype/](/Process-Journal-Task-2/banner-prototype/)
+- **Materials (BOM):** [/materials](/Process-Journal-Task-2/materials.html)
