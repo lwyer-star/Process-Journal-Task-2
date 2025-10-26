@@ -1,7 +1,7 @@
 # Materials — Beyond Human (Task 3)
 
 Working bill of materials (BOM) for the harness + glanceable UI prototype.
-_Chosen path:_ **LED mirror** (no haptic for v1).  
+_Chosen path:_ LED mirror (no haptic for v1).  
 _Last updated: 2025-10-23_
 
 ---
@@ -18,7 +18,7 @@ _Last updated: 2025-10-23_
 | Reflective tape               | 10–15 mm                             | 0.2 m | Spotlight | $3–$6 | Night visibility |
 | Snaps / bar-tacks             | Plastic snaps _or_ dense stitches    | 2   | Spotlight | $2–$4 | Secondary retention |
 
-**Pouch guideline:** internal cavity ≈ **45 × 45 × 12 mm** (tiny puck + battery). Seam allowance 6–8 mm. Two mesh vents on opposite sides.
+**Pouch guideline:** internal cavity ≈ 45 × 45 × 12 mm(tiny puck + battery). Seam allowance 6–8 mm. Two mesh vents on opposite sides.
 
 ---
 
@@ -29,12 +29,12 @@ _Last updated: 2025-10-23_
 | Microcontroller   | ESP32-C3 SuperMini / Seeed XIAO  | 1   | Core / Jaycar | $8–$18         | BLE link; simple state machine |
 | RGB LED (diffused)| 5 mm diffused RGB (common anode/cathode) | 1 | Jaycar / Core | $1–$3  | Mirrors UI state (G/A/R) |
 | Resistors         | 220–330 Ω (per LED channel)      | 3   | Jaycar        | <$1            | Current limiting |
-| Battery (choose)  | **CR2032** holder + cell (_chosen_) | 1 | Jaycar        | $3–$6          | Lighter/simpler than LiPo |
+| Battery (choose)  | CR2032 holder + cell (_chosen_) | 1 | Jaycar        | $3–$6          | Lighter/simpler than LiPo |
 | Switch            | Mini slide switch                | 1   | Jaycar        | $2–$4          | Safe power-off |
 | Enclosure         | 3D-printed (TPU/ABS), filleted   | 1   | —             | —              | Rounded edges for comfort |
 | Wiring & headers  | Silicone wire / JST              | —   | Jaycar        | $2–$5          | Strain relief important |
 
-> **Why CR2032?** Safer and simpler for v1. No on-body charging. If you later need stronger output, swap to a small **LiPo 150–300 mAh (protected)**—but keep charging **off the harness**.
+> **Why CR2032?** Safer and simpler for v1. No on-body charging. If you later need stronger output, swap to a small **LiPo 150–300 mAh (protected)**—but keep charging off the harness.
 
 ---
 
@@ -72,7 +72,7 @@ _Last updated: 2025-10-23_
 
 ---
 
-## Sourcing links (fill as you order)
+## Sourcing links 
 - Mesh & ripstop:  
 - Velcro, webbing, reflective tape:  
 - ESP32-C3 / XIAO, RGB LED, resistors, CR2032 + holder, switch:  
