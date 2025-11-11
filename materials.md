@@ -1,5 +1,15 @@
 # Materials — Beyond Human (Task 3)
 
+---
+layout: default
+title: Materials (BOM)
+---
+
+Navigation: [Home](/Process-Journal-Task-2/) · [Week 6](/Process-Journal-Task-2/weeks/week6.html) · [Week 7](/Process-Journal-Task-2/weeks/week7.html) · [Week 8](/Process-Journal-Task-2/weeks/week8.html) · [Week 9](/Process-Journal-Task-2/weeks/week9.html) · [Week 10](/Process-Journal-Task-2/weeks/week10.html) · [Week 11](/Process-Journal-Task-2/weeks/week11.html) · [materials](/Process-Journal-Task-2/materials.html)
+
+# Materials (BOM)
+
+
 Working bill of materials (BOM) for the harness + glanceable UI prototype.
 _Chosen path:_ LED mirror (no haptic for v1).  
 _Last updated: 2025-10-23_
