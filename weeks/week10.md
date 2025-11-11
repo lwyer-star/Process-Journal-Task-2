@@ -85,7 +85,7 @@ if air_or_heat_is_high:
     state = "Slow + water break"
 elif air_or_heat_is_moderate:
     state = "Shorten route"
-# else: Good to run```
+else: Good to run```
 
 CCopy (v1)
 

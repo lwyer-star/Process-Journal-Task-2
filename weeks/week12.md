@@ -29,44 +29,35 @@ This week I put the hardware together, flashed the ESP32 with a simple rule (CO�
 
 ---
 
-## Thresholds (v2)
+## Thresholds v2 (conservative)
+- Slow + water break when `eCO₂ ≥ 1200 ppm` **or** `temp ≥ 32 °C`  
+- Shorten route when `eCO₂ ≥ 800 ppm` **or** `temp ≥ 28 °C`  
+- Else Good to run
 
-- Slow + water break: `co2 ≥ 1200 ppm` **or** `temp ≥ 32 °C`  
-- Shorten route: `co2 ≥ 800 ppm` **or** `temp ≥ 28 °C`  
-- Else: Good to run
-
-These are conservative for running with a dog and match Week 11.
+Decision rule picks the worst of the two signals.
 
 ---
 
-## Firmware (Arduino IDE)
+## Firmware (Arduino)
 
-- Board: **ESP32 Arduino** (SparkFun ESP32 Thing Plus WROOM)  
-- Libraries:  
-  - **Wire** (built-in)  
-  - **SparkFun TMP117** (or Adafruit TMP117)  
-  - **Adafruit ENS160** (or Pimoroni/Generic ENS160). If unavailable, you can stub the CO₂ reading temporarily.
-
-> If your ENS160 library reports eCO₂ directly, read that. If it reports TVOC only, keep the structure and mock with a fixed value until swapped.
+Board: SparkFun ESP32 Thing Plus (ESP32 Arduino core)  
+Libraries: Wire (built-in), SparkFun TMP117 (or Adafruit TMP117), Adafruit ENS160 (or your ENS160 lib)
 
 ```cpp
-// Week12: ESP32 Thing Plus + ENS160 (eCO2) + TMP117 (temp) + RGB LED status
+// Week 12 firmware: ESP32 Thing Plus + ENS160 (eCO2) + TMP117 (temp) + RGB LED status
 #include <Wire.h>
 
-// TMP117 (temp)
-#include <SparkFunTMP117.h>        // Install "SparkFun TMP117" library
+// TMP117 temperature sensor
+#include <SparkFunTMP117.h>      // Install "SparkFun TMP117" library
 TMP117 tmp;
 
-// ENS160 (air quality) - choose the library you installed.
-// Example uses Adafruit_ENS160. If you use a different lib, adjust names accordingly.
+// ENS160 air-quality sensor (library may vary)
+// Example uses Adafruit_ENS160; adjust to match your installed library.
 #include <Adafruit_ENS160.h>
 Adafruit_ENS160 ens;
 
-enum State { GOOD, CAUTION, ALERT };
-State state = GOOD;
-
-// GPIOs for RGB (common cathode)
-const int PIN_R = 13;  // series resistor 220–330 Ω
+// RGB LED pins (common cathode)
+const int PIN_R = 13;
 const int PIN_G = 12;
 const int PIN_B = 14;
 
@@ -76,11 +67,12 @@ const int   CO2_ALERT   = 1200;
 const float T_CAUTION   = 28.0;
 const float T_ALERT     = 32.0;
 
-// Helper: set LED to a solid colour
-void ledOff()  { digitalWrite(PIN_R, LOW); digitalWrite(PIN_G, LOW); digitalWrite(PIN_B, LOW); }
-void ledRed()  { digitalWrite(PIN_R, HIGH); digitalWrite(PIN_G, LOW);  digitalWrite(PIN_B, LOW);  }
-void ledAmber(){ digitalWrite(PIN_R, HIGH); digitalWrite(PIN_G, HIGH); digitalWrite(PIN_B, LOW);  }
-void ledGreen(){ digitalWrite(PIN_R, LOW);  digitalWrite(PIN_G, HIGH); digitalWrite(PIN_B, LOW);  }
+enum State { GOOD, CAUTION, ALERT };
+
+void ledOff()   { digitalWrite(PIN_R, LOW);  digitalWrite(PIN_G, LOW);  digitalWrite(PIN_B, LOW); }
+void ledRed()   { digitalWrite(PIN_R, HIGH); digitalWrite(PIN_G, LOW);  digitalWrite(PIN_B, LOW); }
+void ledAmber() { digitalWrite(PIN_R, HIGH); digitalWrite(PIN_G, HIGH); digitalWrite(PIN_B, LOW); }
+void ledGreen() { digitalWrite(PIN_R, LOW);  digitalWrite(PIN_G, HIGH); digitalWrite(PIN_B, LOW); }
 
 State decideState(int eco2, float tempC) {
   if (eco2 >= CO2_ALERT || tempC >= T_ALERT) return ALERT;
@@ -103,54 +95,92 @@ void setup() {
   ledOff();
 
   Serial.begin(115200);
-  Wire.begin(); // SDA 21, SCL 22 on Thing Plus by default
+  Wire.begin(); // Thing Plus SDA=21, SCL=22
 
   // TMP117 init
   if (!tmp.begin()) {
-    Serial.println("TMP117 not found; check I2C wiring.");
+    Serial.println("TMP117 not found (check I2C wiring).");
   }
 
   // ENS160 init
   if (!ens.begin()) {
-    Serial.println("ENS160 not found; check I2C wiring.");
+    Serial.println("ENS160 not found (check I2C wiring).");
   } else {
     ens.setMode(ENS160_OPMODE_STD); // standard mode
   }
 
-  // brief colour cycle to confirm LED channels
-  ledRed();   delay(300);
-  ledAmber(); delay(300);
-  ledGreen(); delay(300);
+  // Quick LED channel check
+  ledRed();   delay(250);
+  ledAmber(); delay(250);
+  ledGreen(); delay(250);
 }
 
 void loop() {
   // Read temperature
-  float tempC = NAN;
-  if (tmp.dataReady()) {
-    tempC = tmp.readTempC();
-  } else {
-    tempC = tmp.readTempC(); // force read if your lib requires it
-  }
+  float tempC = tmp.readTempC(); // some libs require dataReady(); this one tolerates direct read
 
   // Read eCO2 from ENS160
-  int eco2 = -1;
-  ens.readGas();           // library-dependent; may update internal values
-  eco2 = ens.geteCO2();    // returns eCO2 ppm if supported
+  ens.readGas();                 // library-dependent; updates internal measurements
+  int eco2 = ens.geteCO2();      // ppm (returns -1 if unsupported or error)
 
-  // Fallback if sensor lib doesn’t expose eCO2 (temporary dev)
-  if (eco2 < 0) {
-    eco2 = 600; // mock baseline value so the rest of the pipeline can be tested
-  }
+  // Fallback if eCO2 not available yet
+  if (eco2 < 0) eco2 = 600;
 
-  // Decide state and show LED
-  state = decideState(eco2, tempC);
-  showState(state);
+  // Decide and display
+  State s = decideState(eco2, tempC);
+  showState(s);
 
-  // Serial log for Week 12 field notes
-  Serial.print("TempC: "); Serial.print(tempC, 1);
-  Serial.print("  eCO2: "); Serial.print(eco2);
-  Serial.print("  State: ");
-  Serial.println(state == GOOD ? "Good" : state == CAUTION ? "Caution" : "Alert");
+  // Serial log for field notes
+  Serial.print("TempC="); Serial.print(tempC, 1);
+  Serial.print("  eCO2="); Serial.print(eco2);
+  Serial.print("  State=");
+  Serial.println(s == GOOD ? "Good" : s == CAUTION ? "Caution" : "Alert");
 
-  delay(1500); // gentle cadence for walking tests
+  delay(1500);
 }
+Print settings (Bambu P1S, PLA)
+
+Layer height 0.20 mm
+
+Walls 3 (≈1.2 mm)
+
+Top/bottom 4–5
+
+Infill 15–20% gyroid
+
+Orientation: backplate flat; housing upright with minimal supports around the switch window
+
+Post-process: light deburr on strap faces; ensure no sharp edges
+
+Assembly checks
+
+Switch travel is positive; not easy to bump.
+
+Battery cannot rattle; remove to charge (no on-dog charging).
+
+LED window/diffuser visible at ~1–2 m.
+
+Nothing rigid sits over the trachea; lower-chest position comfortable.
+
+Field checks (log template)
+
+22 Oct, 7:15 am — temp . °C, eCO₂ ____ → Good to run
+Notes: LED visibility, copy clarity, any confusion.
+
+22 Oct, 5:10 pm — temp . °C, eCO₂ ____ → Shorten route
+Notes: water/route prompt useful? stability near boundary?
+
+23 Oct, 1:05 pm — temp . °C, eCO₂ ____ → Slow + water break
+Notes: shade stop helpful? any latency?
+What worked and what’s next
+
+The simple rule feels predictable; LED readability is good in motion.
+
+Next week: minor threshold/copy tweaks from logs, polish enclosure edges, capture a short state-transition clip for the showreel.
+
+
+### Image checklist to create later
+- `assets/images/week12-wiring-overview-01.jpg`  
+- `assets/images/week12-led-colour-check-01.jpg`  
+- `assets/images/week12-print-variant-mounted-01.jpg`  
+- `assets/images/week12-field-check-screenshot-01.jpg
