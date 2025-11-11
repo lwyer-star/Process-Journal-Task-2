@@ -25,26 +25,26 @@ This week I laid out the initial hardware direction using an Adafruit Feather RP
 - **Indicator:** 5 mm diffused RGB LED + resistors — bright but not harsh; solid colours only.
 
 <figure>
-  <img src="../assets/images/week10-board-rp2040.jpg" alt="Photo of Adafruit Feather RP2040 Adalogger on desk">
+  <img src="../assets/images/week10-rp2040-feather-top.jpg" alt="Adafruit Feather RP2040 Adalogger on desk">
   <figcaption>RP2040 Adalogger used for the first LED mirror test.</figcaption>
 </figure>
 
 <figure>
-  <img src="../assets/images/week10-kit-laid-out.jpg" alt="Photo: LiPo, RP2040, resistors, switch, and a QT lead arranged and labelled">
+  <img src="../assets/images/week10-parts-flatlay-01.jpg" alt="LiPo, RP2040, resistors, switch, and a QT lead arranged and labelled">
   <figcaption>Starter kit for the LED proof: board, battery, resistors, slide switch, LED.</figcaption>
 </figure>
 
 ## First LED test (breadboard)
-I wired the LED (common cathode) with series resistors and cycled colours to check readability and glare.
+I wired the LED (common cathode) with series resistors and cycled colours to check glare and distance legibility. Solid green/amber/red was easiest to parse while walking; flashing felt distracting and wastes battery.
 
 <figure>
-  <img src="../assets/images/week10-led-diffuser-bead.jpg" alt="Close up of a tiny diffused LED bead held between fingers">
-  <figcaption>Diffused LED bead — chosen for a soft, readable glow.</figcaption>
+  <img src="../assets/images/week10-led-diffuser-01.jpg" alt="Close up of a tiny diffused LED bead held between fingers">
+  <figcaption>Diffused LED bead for a soft, readable glow.</figcaption>
 </figure>
 
 <figure>
-  <img src="../assets/images/week10-breadboard-led-test.jpg" alt="Photo of RP2040 on a breadboard driving a red LED; USB power on">
-  <figcaption>Breadboard test: solid colours only (no flashing) look best while moving.</figcaption>
+  <img src="../assets/images/week10-breadboard-led-test.jpg" alt="RP2040 on a breadboard driving a red LED">
+  <figcaption>Breadboard LED test confirming “solid colour only”.</figcaption>
 </figure>
 
 ## What worked
