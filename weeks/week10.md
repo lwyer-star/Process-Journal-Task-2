@@ -7,11 +7,11 @@ title: Week 10 — Task 3 kickoff (plan, scope, next steps)
 
 # Week 10 — Task 3 kickoff
 
-This week I moved from the Week 9 presentation into concrete planning for the working prototype. I locked v1 scope, clarified constraints, and set a simple three-state rule so I can build and test quickly next.
+This week I moved from the Week 9 presentation into concrete planning for the working prototype. I locked v1 scope, clarified constraints and set a simple three-state rule so I can build and test quickly next.
 
 ## First hardware plan (RP2040) and LED test
 
-This week I laid out the initial hardware direction using an Adafruit Feather RP2040 Adalogger, a LiPo pack, a small slide switch, and a single diffused LED as a glanceable status mirror. I breadboarded a minimal test to confirm visibility and the “no flashing, solid colour” rule.
+This week I laid out the initial hardware direction using an Adafruit Feather RP2040 Adalogger, a LiPo pack, a small slide switch and a single diffused LED as a glanceable status mirror. I breadboarded a minimal test to confirm visibility and the “no flashing, solid colour” rule.
 
 ## What I set out to do
 - Prove the LED mirror concept (Good/Amber/Red) without building full sensing.
@@ -48,8 +48,8 @@ I wired the LED (common cathode) with series resistors and cycled colours to che
 </figure>
 
 ## What worked
-- The **single LED** is readable at ~1–2 m and doesn’t demand attention like a screen.
-- The **feather form factor** is compact; battery and switch integrate cleanly.
+- The single LED is readable at ~1–2 m and doesn’t demand attention like a screen.
+- The feather form factor is compact; battery and switch integrate cleanly.
 
 ## What was missing 
 - **No built-in BLE** → would need an extra module just to talk to the phone.  
@@ -99,14 +99,16 @@ Caution — Heat/air rising. Pick a shorter loop; plan water.
 
 Alert — High heat/air. Slow down, shade, give water.
 
-Prototype references (from existing UI)
-<figure> <img src="../assets/images/week11-expanded-caution.png" alt="Expanded banner open in Caution with Why and one Action"> <figcaption>Chip → Banner pattern kept terse: one Why, one Action.</figcaption> </figure> <figure> <img src="../assets/images/week11-expanded-alert.png" alt="Expanded banner open in Alert with Why and one Action"> <figcaption>Alert wording tightened for clarity in motion.</figcaption> </figure>
-Evidence (Week 10 photos)
-<figure> <img src="../assets/images/week10-rp2040-feather-top.jpg" alt="Adafruit Feather RP2040 Adalogger board close-up on desk"> <figcaption>RP2040 Feather Adalogger I first planned to use in Task 3 before pivoting to ESP32.</figcaption> </figure> <figure> <img src="../assets/images/week10-parts-flatlay-01.jpg" alt="Flat lay: QT/STEMMA lead, 3.7V LiPo 400 mAh, RP2040 Feather, resistors pack, slide switch, RTC and temperature sensor"> <figcaption>Early parts flat-lay for the first build idea (RP2040 + LiPo + switch + RTC + temp). Useful for wiring plan and BOM cross-check.</figcaption> </figure> <figure> <img src="../assets/images/week10-led-diffuser-01.jpg" alt="Small translucent light-diffuser bead held between fingers"> <figcaption>Tiny diffuser bead I tried as a light pipe for a glanceable LED—concept carried forward.</figcaption> </figure> <figure> <img src="../assets/images/week10-breadboard-led-test.jpg" alt="Breadboard test with RP2040 Feather and an LED lit"> <figcaption>Quick breadboard LED test to validate the “solid colour only” approach for glanceable feedback.</figcaption> </figure>
-What I’ll do next (Week 11)
-
 Commit to hardware (ESP32) and 3D-print the soft-edged housing.
 
 Wire sensors and mirror states to a diffused RGB LED.
 
 Lock conservative thresholds and run two short checks (cool morning vs warm arvo).
+
+Evidence to add later (when available)
+
+Short clip: LED readability at ~1–2 m while walking (evening + daytime).
+
+Weight check of the RP2040 breadboard pack.
+
+Any glare comparison (diffused vs clear LED).
