@@ -34,7 +34,7 @@ _Last updated: 2025-10-23_
 | Enclosure         | 3D-printed (TPU/ABS), filleted   | 1   | —             | —              | Rounded edges for comfort |
 | Wiring & headers  | Silicone wire / JST              | —   | Jaycar        | $2–$5          | Strain relief important |
 
-> **Why CR2032?** Safer and simpler for v1. No on-body charging. If you later need stronger output, swap to a small **LiPo 150–300 mAh (protected)**—but keep charging off the harness.
+> **Why CR2032?** Safer and simpler for v1. No on-body charging. If I later need stronger output, swap to a small **LiPo 150–300 mAh (protected)**—but keep charging off the harness.
 
 ---
 

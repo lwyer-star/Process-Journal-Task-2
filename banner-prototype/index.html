@@ -1,44 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Banner Prototype — Week 8</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Glanceable Banner Prototype</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <!-- Fixed status banner -->
   <header class="status-banner" role="status" aria-live="polite">
-    <div class="status-chip" id="statusChip" aria-label="Current status">
+    <button class="chip" id="chipBtn" aria-expanded="false">
       <span class="dot" aria-hidden="true"></span>
-      <span class="label" id="statusLabel">Normal</span>
-    </div>
-    <div class="status-meta">
-      <span id="statusMeta">Simulated sensor state</span>
-    </div>
+      <span id="chipLabel">Good to run</span>
+    </button>
+    <button class="refresh" id="refreshBtn" aria-label="Refresh">Refresh</button>
+    <span class="badge" id="approxBadge" hidden>approximate</span>
   </header>
 
-  <!-- Demo content to scroll behind the fixed banner -->
-  <main class="content">
-    <h1>Week 8 — Prototyping & Tests</h1>
-    <p>This page demonstrates a simple responsive banner that changes state (Normal → Caution → Alert) every 2 seconds to simulate sensor input.</p>
-    <p>Use this for screenshots and motion tests in your process journal.</p>
-    <section>
-      <h2>How it works</h2>
-      <ul>
-        <li>Auto-cycles through three states with smooth transitions</li>
-        <li>Accessible: updates announced via <code>aria-live</code></li>
-        <li>Responsive: fixed at top, looks good on mobile/desktop</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Try interactions</h2>
-      <ul>
-        <li>Click the chip to pause/resume cycling</li>
-        <li>Resize the window to test responsiveness</li>
-      </ul>
-    </section>
-    <p style="height: 120vh;"></p>
+  <main class="wrap">
+    <h1>Glanceable chip + expanded banner</h1>
+    <details id="expander">
+      <summary class="summary">Show details</summary>
+      <section class="card">
+        <h4>Why</h4>
+        <p id="whyLine">Conditions safe.</p>
+        <h4>Action</h4>
+        <p id="actionLine">Keep an easy pace.</p>
+      </section>
+    </details>
   </main>
 
   <script src="./app.js"></script>

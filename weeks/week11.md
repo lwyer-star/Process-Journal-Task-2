@@ -4,6 +4,9 @@
 
 This week I implemented the expanded banner: tapping the chip reveals one short Why and one clear Action. I also added a Refresh button and an approximate badge for non-local AQI.
 
+**Live demo:** [/banner-prototype/](/Process-Journal-Task-2/banner-prototype/)
+
+
 ---
 
 ### What I set out to do
@@ -61,7 +64,6 @@ Notes: Stronger wording improved compliance; opening on demand works best.
 
 ---
 
-### Links
 ### Links
 - **Live demo:** [/banner-prototype/](/Process-Journal-Task-2/banner-prototype/)
 - **Materials (BOM):** [/materials](/Process-Journal-Task-2/materials.html)
