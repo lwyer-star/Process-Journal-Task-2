@@ -39,6 +39,20 @@ Rationale: safety-first; small nudges reduce flip-flopping when readings hover n
 
 ---
 
+## Harness mounting
+
+I mounted the finished enclosure on my existing EzyDog running harness to check how it sits on the dog’s chest, how much it moves while running, and whether any edges dig in.
+
+<figure>
+  <img src="/Process-Journal-Task-2/assets/images/week13_ezydog_harness.jpg"
+       alt="Existing EzyDog running harness used for mounting prototype">
+  <figcaption><strong>Figure 13.1.</strong> Existing EzyDog running harness used as the base for mounting the electronics enclosure and remote sensor pod on the lower chest strap.</figcaption>
+</figure>
+
+The lower-chest position keeps the trachea clear and makes the LED visible to the runner while still leaving room for an optional phone pouch on the back.
+
+---
+
 ## Short test notes (field)
 
 - 25 Oct, 7:05 am — 20.1 °C, eCO₂ 610 → Good  
@@ -52,29 +66,14 @@ Rationale: safety-first; small nudges reduce flip-flopping when readings hover n
 
 ---
 
-## Evidence placeholders (add when ready)
+## Evidence checklist (photos to add later)
 
-Save photos to `assets/images/` using these filenames. Replace the TODO captions later.
+When I have time I’ll add more build/detail photos. Planned shots:
 
-<figure>
-  <img src="../assets/images/week13-led-diffuser-seat.jpg" alt="Close photo of recessed LED diffuser seat inside the housing lid">
-  <figcaption>TODO: diffuser seat detail showing flush fit and less hotspot.</figcaption>
-</figure>
-
-<figure>
-  <img src="../assets/images/week13-switch-slot-fillet.jpg" alt="Macro shot of switch slot with small corner fillets">
-  <figcaption>TODO: switch slot fillet close-up to reduce snag risk.</figcaption>
-</figure>
-
-<figure>
-  <img src="../assets/images/week13-strap-fit.jpg" alt="Housing mounted on lower chest strap showing rounded edges and EVA strip">
-  <figcaption>TODO: strap fit and comfort—rounded edges + EVA backing.</figcaption>
-</figure>
-
-<figure>
-  <img src="../assets/images/week13-state-transition-clip-still.jpg" alt="Still frame from state transition clip showing LED colour change">
-  <figcaption>TODO: still from state-transition clip (Good → Caution or Caution → Alert).</figcaption>
-</figure>
+- `week13-led-diffuser-seat.jpg` — close photo of recessed LED diffuser seat inside the housing lid (flush fit, reduced hotspot).  
+- `week13-switch-slot-fillet.jpg` — macro shot of the switch slot showing the small corner fillets that reduce strap snagging.  
+- `week13-strap-fit.jpg` — housing mounted on the lower chest strap showing rounded edges and EVA backing.  
+- `week13-state-transition-clip-still.jpg` — still frame from a state-transition clip (Good → Caution or Caution → Alert) with the LED colour change visible.
 
 ---
 
