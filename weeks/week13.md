@@ -37,6 +37,21 @@ Rationale: safety-first; small nudges reduce flip-flopping when readings hover n
 - Filleted the switch slot corners by +0.3 mm (less snagging on straps).  
 - Softened backplate edges and added a thin EVA strip against the harness.
 
+### LED diffuser seat detail
+
+<figure>
+  <img src="/Process-Journal-Task-2/assets/images/week13_led_diffuser_backplate_layout.jpg"
+       alt="LED PCB and 3D-printed backplate showing circular diffuser cut-out">
+  <figcaption><strong>Figure 13.2.</strong> Backplate with a new circular cut-out for the LED diffuser alongside the round LED PCB before installation.</figcaption>
+</figure>
+
+<figure>
+  <img src="/Process-Journal-Task-2/assets/images/week13_led_diffuser_seat_installed.jpg"
+       alt="Round LED PCB mounted in recessed diffuser seat on 3D-printed backplate">
+  <figcaption><strong>Figure 13.3.</strong> Round LED PCB mounted in the recessed diffuser seat so the light sits flush and spreads more evenly across the front panel.</figcaption>
+</figure>
+
+
 ---
 
 ## Harness mounting
@@ -70,7 +85,7 @@ The lower-chest position keeps the trachea clear and makes the LED visible to th
 
 When I have time I’ll add more build/detail photos. Planned shots:
 
-- `week13-led-diffuser-seat.jpg` — close photo of recessed LED diffuser seat inside the housing lid (flush fit, reduced hotspot).  
+  
 - `week13-switch-slot-fillet.jpg` — macro shot of the switch slot showing the small corner fillets that reduce strap snagging.  
 - `week13-strap-fit.jpg` — housing mounted on the lower chest strap showing rounded edges and EVA backing.  
 - `week13-state-transition-clip-still.jpg` — still frame from a state-transition clip (Good → Caution or Caution → Alert) with the LED colour change visible.
