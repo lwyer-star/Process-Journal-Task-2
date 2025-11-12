@@ -7,7 +7,7 @@ title: Week 11 — Pivot to ESP32, local sensors, and housing print
 
 # Week 11 — Pivot to ESP32, local sensors, and housing print
 
-I pivoted from the RP2040 plan to the SparkFun Thing Plus ESP32 (USB-C) for **native BLE** and simpler **3.3 V I²C**. I paired PiicoDev ENS160 (eCO₂/TVOC) and TMP117 (temperature), and printed a soft-edged PLA housing with a slide-switch window for a lower-chest mount.
+I pivoted from the RP2040 plan to the SparkFun Thing Plus ESP32 (USB-C) for native BLE and simpler 3.3 V I²C. I paired PiicoDev ENS160 (eCO₂/TVOC) and TMP117 (temperature), and printed a soft-edged PLA housing with a slide-switch window for a lower-chest mount.
 
 ---
 
@@ -37,7 +37,7 @@ PLA print with rounded edges, mounted lower on the chest. Lid/backplate includes
 ## Parts and prints (photos)
 
 <figure>
-  <img src="../assets/images/week11-parts-esp32-sensors-bom.jpg" alt="ESP32 Thing Plus, ENS160, TMP117, LiPo and QT lead arranged and labelled">
+  <img src="../assets/images/week11-parts-flatlay-02.jpg" alt="ESP32 Thing Plus, ENS160, TMP117, LiPo and QT lead arranged and labelled">
   <figcaption>Post-pivot parts: ESP32 Thing Plus, ENS160, TMP117, LiPo, QT lead.</figcaption>
 </figure>
 
@@ -86,6 +86,7 @@ elif co2_ppm >= 800 or temp_c >= 28:
     state = "Shorten route"
 # else: Good to run
 
+
 Optional near-boundary behaviour: a small dog-factor multiplier (e.g., ×1.05 for heavy coat/age) can bump the state up one level.
 
 Tests and observations
@@ -95,6 +96,10 @@ Placement: lower-chest mount stayed stable over a 5–10 min walk/jog.
 Visibility: LED readable at ~1–2 m; chip alone often enough; banner opened on demand.
 
 Copy: stronger Alert wording improved compliance.
+
+Near-boundary behaviour (optional): apply a small dog-factor multiplier (e.g., ×1.05 for heavy coat/age) to bump the state up one level when close to thresholds.
+
+<p><em>These thresholds map to the three UI states shown below.</em></p> <div class="img-row"> <figure> <img src="../assets/images/week11-expanded-good-01.png" alt="Expanded banner open in Good with Why and one Action"> <figcaption><em>Good</em> — Conditions safe. Keep an easy pace.</figcaption> </figure> <figure> <img src="../assets/images/week11-expanded-caution-01.png" alt="Expanded banner open in Caution with Why and one Action"> <figcaption><em>Shorten route</em> — Heat/AQI up. Plan a water stop.</figcaption> </figure> <figure> <img src="../assets/images/week11-expanded-alert-01.png" alt="Expanded banner open in Alert with Why and one Action"> <figcaption><em>Slow + water</em> — High heat/AQI. Slow down, shade, give water.</figcaption> </figure> </div> <style> .img-row{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0} .img-row figure{flex:1 1 280px;margin:0} .img-row img{width:100%;height:auto;border-radius:8px} .img-row figcaption{font-size:.9rem;color:#4b5563;margin-top:6px} </style>
 
 Next (Week 12)
 

@@ -33,8 +33,8 @@ Rationale: safety-first; small nudges reduce flip-flopping when readings hover n
 
 ## Enclosure polish
 
-- Added a 0.5 mm recessed **diffuser seat** so the LED sits flush (less hotspot).  
-- Filleted the **switch slot** corners by +0.3 mm (less snagging on straps).  
+- Added a 0.5 mm recessed diffuser seat so the LED sits flush (less hotspot).  
+- Filleted the switch slot corners by +0.3 mm (less snagging on straps).  
 - Softened backplate edges and added a thin EVA strip against the harness.
 
 ---
