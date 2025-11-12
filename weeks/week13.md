@@ -51,6 +51,14 @@ Rationale: safety-first; small nudges reduce flip-flopping when readings hover n
   <figcaption><strong>Figure 13.3.</strong> Round LED PCB mounted in the recessed diffuser seat so the light sits flush and spreads more evenly across the front panel.</figcaption>
 </figure>
 
+### Venting and cable exit
+
+<figure>
+  <img src="/Process-Journal-Task-2/assets/images/week13_vent_and_cable_detail.jpg"
+       alt="Side view of enclosure showing vent slots, cable exit and switch position">
+  <figcaption><strong>Figure 13.4.</strong> Side view of the enclosure showing angled vent slots over the electronics, the braided cable exit, and the low-profile switch position. This layout keeps the housing breathable while avoiding any hard edges against the dog.</figcaption>
+</figure>
+
 
 ---
 
