@@ -10,16 +10,17 @@ title: Week 12 — Build, code, and final print tests
 This week I assembled the hardware, flashed the ESP32 with the simple “worst-of-two” rule (eCO₂ + temperature → 3 states), verified LED colours while moving, and printed the enclosure variant that suits the lower-chest mount.
 
 <figure>
-  <img src="/Process-Journal-Task-2/assets/img/week12/week12_enclosure_side.jpg"
+  <img src="/Process-Journal-Task-2/assets/images/week12_enclosure_side.jpg"
        alt="Side view of 3D-printed ESP32 enclosure showing internal boards">
   <figcaption><strong>Figure 12.1.</strong> Side view of the 3D-printed main enclosure with the ESP32 and sensor interface boards installed.</figcaption>
 </figure>
 
 <figure>
-  <img src="/Process-Journal-Task-2/assets/img/week12/week12_enclosure_top_cable.jpg"
+  <img src="/Process-Journal-Task-2/assets/images/week12_enclosure_top_cable.jpg"
        alt="Top view of ESP32 main enclosure with cable routed to remote sensor pod">
   <figcaption><strong>Figure 12.2.</strong> Top view of the main enclosure showing board layout and the braided cable running out to the remote sensor pod.</figcaption>
 </figure>
+
 
 ---
 
@@ -157,8 +158,26 @@ Remote sensor pod
 
 The air-quality/temperature sensor sits in a small separate pod at the end of the braided cable so it can sit closer to the dog’s chest and away from the bulk of the electronics.
 
-<figure> <img src="/Process-Journal-Task-2/assets/img/week12/week12_sensor_pod_open.jpg" alt="Open 3D-printed sensor pod showing temperature sensor PCB"> <figcaption><strong>Figure 12.3.</strong> Remote sensor pod with the lid removed, showing the temperature/air-quality sensor board and JST connector.</figcaption> </figure> <figure> <img src="/Process-Journal-Task-2/assets/img/week12/week12_sensor_pod_closed.jpg" alt="Closed sensor pod with perforated lid for airflow"> <figcaption><strong>Figure 12.4.</strong> Sensor pod closed with a perforated lid so air can reach the sensor while still protecting the PCB.</figcaption> </figure>
-Field checks (log template)
+### Remote sensor pod
+
+The air-quality and temperature sensor lives in a small separate pod at the end of the braided cable so it can sit closer to the dog’s chest and away from the main electronics housing.
+
+<figure>
+  <img src="/Process-Journal-Task-2/assets/images/week12_sensor_pod_open.jpg"
+       alt="Open 3D-printed sensor pod showing temperature sensor PCB">
+  <figcaption><strong>Figure 12.3.</strong> Remote sensor pod with the lid removed, showing the temperature/air-quality sensor board and JST connector.</figcaption>
+</figure>
+
+<figure>
+  <img src="/Process-Journal-Task-2/assets/images/week12_sensor_pod_closed.jpg"
+       alt="Closed sensor pod with perforated lid for airflow">
+  <figcaption><strong>Figure 12.4.</strong> Sensor pod closed with a perforated lid so air can reach the sensor while still protecting the PCB.</figcaption>
+</figure>
+
+---
+
+## Field checks (log template)
+
 
 22 Oct, 7:15 am — temp __ °C, eCO₂ __ → Good to run
 Notes: LED visibility, copy clarity, any confusion.
