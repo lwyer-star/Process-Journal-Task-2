@@ -5,28 +5,35 @@ title: Week 12 — Build, code, and final print tests
 
 **Navigation:** [Home](/Process-Journal-Task-2/) · [Materials](/Process-Journal-Task-2/materials.html) · [Week 6](/Process-Journal-Task-2/weeks/week6.html) · [Week 7](/Process-Journal-Task-2/weeks/week7.html) · [Week 8](/Process-Journal-Task-2/weeks/week8.html) · [Week 9](/Process-Journal-Task-2/weeks/week9.html) · [Week 10](/Process-Journal-Task-2/weeks/week10.html) · [Week 11](/Process-Journal-Task-2/weeks/week11.html) · [Week 12](/Process-Journal-Task-2/weeks/week12.html) · [Week 13](/Process-Journal-Task-2/weeks/week13.html) · [Week 14](/Process-Journal-Task-2/weeks/week14.html)
 
----
-layout: default
-title: Week 12 — Build, code, and final print tests
----
-
-**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](/Process-Journal-Task-2/weeks/week6.html) · [Week 7](/Process-Journal-Task-2/weeks/week7.html) · [Week 8](/Process-Journal-Task-2/weeks/week8.html) · [Week 9](/Process-Journal-Task-2/weeks/week9.html) · [Week 10](/Process-Journal-Task-2/weeks/week10.html) · [Week 11](/Process-Journal-Task-2/weeks/week11.html) · [Week 12](/Process-Journal-Task-2/weeks/week12.html) · [Week 13](/Process-Journal-Task-2/weeks/week13.html) · [Week 14](/Process-Journal-Task-2/weeks/week14.html)
-
 # Week 12 — Build, code, and final print tests
 
 This week I assembled the hardware, flashed the ESP32 with the simple “worst-of-two” rule (eCO₂ + temperature → 3 states), verified LED colours while moving, and printed the enclosure variant that suits the lower-chest mount.
+
+<figure>
+  <img src="/Process-Journal-Task-2/assets/img/week12/week12_enclosure_side.jpg"
+       alt="Side view of 3D-printed ESP32 enclosure showing internal boards">
+  <figcaption><strong>Figure 12.1.</strong> Side view of the 3D-printed main enclosure with the ESP32 and sensor interface boards installed.</figcaption>
+</figure>
+
+<figure>
+  <img src="/Process-Journal-Task-2/assets/img/week12/week12_enclosure_top_cable.jpg"
+       alt="Top view of ESP32 main enclosure with cable routed to remote sensor pod">
+  <figcaption><strong>Figure 12.2.</strong> Top view of the main enclosure showing board layout and the braided cable running out to the remote sensor pod.</figcaption>
+</figure>
 
 ---
 
 ## Wiring (ESP32 Thing Plus → sensors + LED)
 
 ### I²C (QT / STEMMA)
+
 - 3V3 → sensors VCC  
 - GND → sensors GND  
 - SDA (GPIO 21) → ENS160/TMP117 SDA  
 - SCL (GPIO 22) → ENS160/TMP117 SCL  
 
 ### NeoPixel LED (WS2812)
+
 - +5V (VUSB when on USB, or LiPo 3.7 V is OK for a single pixel) → LED VCC  
 - GND → LED GND (must share ground with the ESP32)  
 - DIN → GPIO 13 (recommend 330 Ω series resistor on data)  
@@ -36,6 +43,7 @@ This week I assembled the hardware, flashed the ESP32 with the simple “worst-o
 ---
 
 ## Thresholds v2.1 (tuned)
+
 Decision rule picks the worst of the two signals.
 
 - Slow + water break when eCO₂ ≥ 1250 ppm or temp ≥ 33 °C  
@@ -120,7 +128,9 @@ void loop() {
   Serial.print("  State="); Serial.println(s == GOOD ? "Good" : s == CAUTION ? "Caution" : "Alert");
   delay(1500);
 }
+Physical build and mounting
 Print settings (Bambu P1S, PLA)
+
 Layer height 0.20 mm
 
 Walls 3 (≈ 1.2 mm)
@@ -134,6 +144,7 @@ Orientation: backplate flat; housing upright with minimal supports at the switch
 Post-process: light deburr on strap faces; no sharp edges
 
 Assembly checks
+
 Switch travel is positive and not easy to bump.
 
 Battery is snug; remove to charge (no on-dog charging).
@@ -142,7 +153,13 @@ LED window/diffuser visible at ~1–2 m.
 
 Nothing rigid over the trachea; lower-chest position is comfortable.
 
+Remote sensor pod
+
+The air-quality/temperature sensor sits in a small separate pod at the end of the braided cable so it can sit closer to the dog’s chest and away from the bulk of the electronics.
+
+<figure> <img src="/Process-Journal-Task-2/assets/img/week12/week12_sensor_pod_open.jpg" alt="Open 3D-printed sensor pod showing temperature sensor PCB"> <figcaption><strong>Figure 12.3.</strong> Remote sensor pod with the lid removed, showing the temperature/air-quality sensor board and JST connector.</figcaption> </figure> <figure> <img src="/Process-Journal-Task-2/assets/img/week12/week12_sensor_pod_closed.jpg" alt="Closed sensor pod with perforated lid for airflow"> <figcaption><strong>Figure 12.4.</strong> Sensor pod closed with a perforated lid so air can reach the sensor while still protecting the PCB.</figcaption> </figure>
 Field checks (log template)
+
 22 Oct, 7:15 am — temp __ °C, eCO₂ __ → Good to run
 Notes: LED visibility, copy clarity, any confusion.
 
@@ -153,11 +170,16 @@ Notes: water/route prompt useful? stability near boundary?
 Notes: shade stop helpful? any latency?
 
 What worked and what’s next
+
 The simple rule feels predictable; LED readability is good in motion.
 
 Next week: minor threshold/copy tweaks from logs, soften enclosure edges, and capture a short state-transition clip for the showreel.
 
+I also noted a circular ESP32 wearable board that could better match the curve of the harness in a future version:
+
+<figure> <img src="/Process-Journal-Task-2/assets/img/week12/week12_alt_esp32_wearable.jpg" alt="Duinotech ESP32 wearable development board considered for future iteration"> <figcaption><strong>Figure 12.5.</strong> Duinotech ESP32 wearable development board spotted in-store. A round board like this would suit a curved, low-profile harness mount in a later iteration.</figcaption> </figure>
 Image checklist (to add)
+
 assets/images/week12-wiring-overview-01.jpg
 
 assets/images/week12-led-colour-check-01.jpg
