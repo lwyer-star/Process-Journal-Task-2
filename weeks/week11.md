@@ -84,7 +84,7 @@ if co2_ppm >= 1200 or temp_c >= 32:
     state = "Slow + water break"
 elif co2_ppm >= 800 or temp_c >= 28:
     state = "Shorten route"
-# else: Good to run
+else: Good to run
 
 
 Optional near-boundary behaviour: a small dog-factor multiplier (e.g., ×1.05 for heavy coat/age) can bump the state up one level.
