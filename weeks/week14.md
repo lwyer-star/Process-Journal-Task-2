@@ -1,52 +1,82 @@
 ---
 layout: default
-title: Week 14 — Final showreel and submission
+title: Week 14 — Final prototype & showreel
 ---
 
-**Navigation:** [Home](/Process-Journal-Task-2/) · [Materials](/Process-Journal-Task-2/materials.html) · [Week 6](/Process-Journal-Task-2/weeks/week6.html) · [Week 7](/Process-Journal-Task-2/weeks/week7.html) · [Week 8](/Process-Journal-Task-2/weeks/week8.html) · [Week 9](/Process-Journal-Task-2/weeks/week9.html) · [Week 10](/Process-Journal-Task-2/weeks/week10.html) · [Week 11](/Process-Journal-Task-2/weeks/week11.html) · [Week 12](/Process-Journal-Task-2/weeks/week12.html) · [Week 13](/Process-Journal-Task-2/weeks/week13.html) · [Week 14](/Process-Journal-Task-2/weeks/week14.html)
+**Navigation:** [Home](/Process-Journal-Task-2/) · [Week 6](/Process-Journal-Task-2/weeks/week6.html) · [Week 7](/Process-Journal-Task-2/weeks/week7.html) · [Week 8](/Process-Journal-Task-2/weeks/week8.html) · [Week 9](/Process-Journal-Task-2/weeks/week9.html) · [Week 10](/Process-Journal-Task-2/weeks/week10.html) · [Week 11](/Process-Journal-Task-2/weeks/week11.html) · [Week 12](/Process-Journal-Task-2/weeks/week12.html) · [Week 13](/Process-Journal-Task-2/weeks/week13.html) · [Week 14](/Process-Journal-Task-2/weeks/week14.html)
 
-# Week 14 — Final showreel and submission
+# Week 14 — Final prototype & showreel
 
-I produced a 1–3 minute video that works standalone for a portfolio viewer: what the project is, who it’s for, how it responds, and why the design choices matter.
-
----
-
-## Video outline (shot list)
-
-1. Title card — “Glanceable Heat/Air Run Helper (human + dog)” (2–3 s)  
-2. Problem setup — short VO over footage: *“On hot or smoky days… we need quick, safe decisions.”*  
-3. UI demo — chip → expand → one action (screen capture or phone close-up)  
-4. Physical mirror — LED colours on the harness (Good/Amber/Red)  
-5. In-motion test — walking/jogging shots; show transitions  
-6. Benefits — clear, calm decisions; privacy-first; on-dog glanceable feedback  
-7. Credits — your name, course, tools; “unlisted on YouTube” link in journal
+This week I locked the build, captured the final footage, and exported the **Task 3 showreel**.
 
 ---
 
-## Script beats (≈120–150 words)
+## Final video
 
-- Concept: “A glanceable helper for runners with dogs. It condenses local temperature and CO₂/air into a simple chip: Good, Shorten, or Slow + water.”  
-- Interaction: “Tap to see why and one action—no dashboards.”  
-- Hardware: “An ESP32 in a soft-edged chest mount mirrors the state with a single LED—solid colours only.”  
-- Design: “Safety and comfort first; privacy by design; conservative thresholds tuned in field tests.”  
-- Outcome: “It reduced guesswork and kept attention on the path and the dog.”
+<video controls width="100%">
+  <source src="../assets/videos/DES222-Task3-Showreel-WyerLiam-v1-2025-11-14.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
----
-
-## Delivery
-
-- Host: YouTube (Unlisted).  
-- Add to journal Home page as an HTML5 video source or link.  
-- Filenames for assets/images (stills):  
-  - `week14-title-card.jpg`  
-  - `week14-led-demo.jpg`  
-  - `week14-ui-chip-expand.jpg`
+*Filename:* `DES222-Task3-Showreel-WyerLiam-v1-2025-11-14.mp4`  
+*Where:* `assets/videos/`
 
 ---
 
-## Submission checklist
+## Final build (summary)
 
-- Updated Materials (BOM) to match final parts.  
-- Weeks 10–14 entries complete with images.  
-- Video embedded on Home and linked here.  
-- Acknowledge AI assistance (journal page “AI use” note you already drafted).
+- **Board:** SparkFun ESP32 Thing Plus (USB-C), I²C to sensors.
+- **Sensors:** SparkFun ENS160 (eCO₂/TVOC) + SparkFun TMP117 (temperature).
+- **Indicator:** 1× NeoPixel (WS2812) as a glanceable state LED (green/amber/red).
+- **Rule:** pick the **worst** of `eCO₂` or `temp` using thresholds tuned in Week 13:
+  - **Alert** → `eCO₂ ≥ 1250 ppm` **or** `temp ≥ 33 °C`
+  - **Caution** → `eCO₂ ≥ 820 ppm` **or** `temp ≥ 29 °C`
+  - **Good** otherwise
+- **Enclosure:** PLA, soft-edged, lower-chest mount; backplate snaps; external slide switch.
+- **Power:** 3.7 V LiPo → board 3V3; cable-sleeved pigtail to a small sensor cap.
+
+---
+
+## Photos (final evidence)
+
+<figure>
+  <img src="../assets/images/week14-mounted-on-harness-01.jpg" alt="Final purple PLA enclosure mounted on the small dog harness, LED window facing outward">
+  <figcaption>Mounted on harness (lower-chest). LED window visible at 1–2 m.</figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/images/week14-full-assembly-led-01.jpg" alt="Full assembly on table: main enclosure with green LED on, sleeved cable to perforated sensor cap">
+  <figcaption>Final assembly powered on; sensor cap on sleeved pigtail.</figcaption>
+</figure>
+
+> **Save these in** `assets/images/`
+> - `week14-mounted-on-harness-01.jpg`  ← your photo: <em>week14_mounted_on_small_harness.jpg</em>  
+> - `week14-full-assembly-led-01.jpg`   ← your photo: <em>week14_full_assembly_led_table.jpg</em>
+
+---
+
+## What the video shows
+
+1) **Context & goal** — quick problem framing (safe running with dog).  
+2) **UI** — chip + expanded banner; 3 states with short “Why/Action”.  
+3) **Hardware** — enclosure, mount, wiring, LED mirror.  
+4) **Rule demo** — state transitions via real sensor readouts.  
+5) **Takeaways** — thresholds feel conservative but actionable; LED readable in motion.
+
+---
+
+## Reflection
+
+- The **glanceable LED** removed the need to stare at the phone; colours were readable even at jogging pace.  
+- The **expanded banner** (tap-to-open) worked better than auto-expanding.  
+- The **lower-chest mount** kept rigid parts away from the trachea and reduced bounce.  
+- For a next pass I would: add a tiny **“reason” blip** over BLE (for phone log), longer-life cell, and gasket for drizzle.
+
+---
+
+## Submission items
+
+- Final showreel (above) placed at: `assets/videos/DES222-Task3-Showreel-WyerLiam-v1-2025-11-14.mp4`
+- Updated **materials (BOM)** with actual parts and sources: [/materials](/Process-Journal-Task-2/materials.html)
+- Week 6–14 journal entries (this page is the Week 14 entry).
+
