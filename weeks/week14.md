@@ -39,15 +39,20 @@ This week I locked the build, captured the final footage, and exported the **Tas
 
 ## Photos (final evidence)
 
-<figure>
-  <img src="../assets/images/week14-mounted-on-harness-01.jpg" alt="Final purple PLA enclosure mounted on the small dog harness, LED window facing outward">
-  <figcaption>Mounted on harness (lower-chest). LED window visible at 1–2 m.</figcaption>
-</figure>
+<section>
+  <h2>Photos (final evidence)</h2>
 
-<figure>
-  <img src="../assets/images/week14-full-assembly-led-01.jpg" alt="Full assembly on table: main enclosure with green LED on, sleeved cable to perforated sensor cap">
-  <figcaption>Final assembly powered on; sensor cap on sleeved pigtail.</figcaption>
-</figure>
+  <figure>
+    <img src="../assets/images/week14_mounted_on_small_harness.jpg" alt="Final purple PLA enclosure mounted low on the small dog harness">
+    <figcaption>Mounted on harness (lower-chest). LED window visible at ~1–2 m.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="../assets/images/week14_full_assembly_led_table.jpg" alt="Full assembly on table with green LED and vented sensor cap">
+    <figcaption>Final assembly powered on; sensor cap on sleeved pigtail.</figcaption>
+  </figure>
+</section>
+
 
 > **Save these in** `assets/images/`
 > - `week14-mounted-on-harness-01.jpg`  ← your photo: <em>week14_mounted_on_small_harness.jpg</em>  
