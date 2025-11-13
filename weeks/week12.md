@@ -196,8 +196,6 @@ Next week: minor threshold/copy tweaks from logs, soften enclosure edges, and ca
 
 I also noted a circular ESP32 wearable board that could better match the curve of the harness in a future version:
 
-I also noted a circular ESP32 wearable board that could better match the curve of the harness in a future version:
-
 <figure>
   <img src="/Process-Journal-Task-2/assets/images/week12_alt_esp32_wearable.jpg"
        alt="Duinotech ESP32 wearable development board considered for future iteration">
