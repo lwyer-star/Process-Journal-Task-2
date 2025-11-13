@@ -28,9 +28,9 @@ This week I locked the build, captured the final footage, and exported the **Tas
 - **Board:** SparkFun ESP32 Thing Plus (USB-C), I²C to sensors.
 - **Sensors:** SparkFun ENS160 (eCO₂/TVOC) + SparkFun TMP117 (temperature).
 - **Indicator:** 1× NeoPixel (WS2812) as a glanceable state LED (green/amber/red).
-- **Rule:** pick the **worst** of `eCO₂` or `temp` using thresholds tuned in Week 13:
-  - **Alert** → `eCO₂ ≥ 1250 ppm` **or** `temp ≥ 33 °C`
-  - **Caution** → `eCO₂ ≥ 820 ppm` **or** `temp ≥ 29 °C`
+- **Rule:** pick the worst of `eCO₂` or `temp` using thresholds tuned in Week 13:
+  - **Alert** → `eCO₂ ≥ 1250 ppm` or `temp ≥ 33 °C`
+  - **Caution** → `eCO₂ ≥ 820 ppm` or `temp ≥ 29 °C`
   - **Good** otherwise
 - **Enclosure:** PLA, soft-edged, lower-chest mount; backplate snaps; external slide switch.
 - **Power:** 3.7 V LiPo → board 3V3; cable-sleeved pigtail to a small sensor cap.
@@ -82,6 +82,6 @@ This week I locked the build, captured the final footage, and exported the **Tas
 ## Submission items
 
 - Final showreel (above) placed at: `assets/videos/DES222-Task3-Showreel-WyerLiam-v1-2025-11-14.mp4`
-- Updated **materials (BOM)** with actual parts and sources: [/materials](/Process-Journal-Task-2/materials.html)
+- Updated materials (BOM) with actual parts and sources: [/materials](/Process-Journal-Task-2/materials.html)
 - Week 6–14 journal entries (this page is the Week 14 entry).
 
