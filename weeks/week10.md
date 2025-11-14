@@ -61,7 +61,7 @@ I wired the LED (common cathode) with series resistors and cycled colours to che
 ---
 
 ## Scope (v1)
-- Glanceable **UI** on phone (chip + expandable banner) with **one action** per state.
+- **Glanceable UI** on phone (chip + expandable banner) with **one action** per state.
 - A **physical mirror** of the state (LED) so I don’t need to look at the screen.
 - **Local sensing** (preferred) with a clear fallback message when using nearest-station data.
 
