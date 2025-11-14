@@ -101,6 +101,33 @@ Near-boundary behaviour (optional): apply a small dog-factor multiplier (e.g., �
 
 <p><em>These thresholds map to the three UI states shown below.</em></p> <div class="img-row"> <figure> <img src="../assets/images/week11-expanded-good-01.png" alt="Expanded banner open in Good with Why and one Action"> <figcaption><em>Good</em> — Conditions safe. Keep an easy pace.</figcaption> </figure> <figure> <img src="../assets/images/week11-expanded-caution-01.png" alt="Expanded banner open in Caution with Why and one Action"> <figcaption><em>Shorten route</em> — Heat/AQI up. Plan a water stop.</figcaption> </figure> <figure> <img src="../assets/images/week11-expanded-alert-01.png" alt="Expanded banner open in Alert with Why and one Action"> <figcaption><em>Slow + water</em> — High heat/AQI. Slow down, shade, give water.</figcaption> </figure> </div> <style> .img-row{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0} .img-row figure{flex:1 1 280px;margin:0} .img-row img{width:100%;height:auto;border-radius:8px} .img-row figcaption{font-size:.9rem;color:#4b5563;margin-top:6px} </style>
 
+## Phone screenshots (UI states)
+
+<div class="img-row">
+  <figure>
+    <img src="../assets/images/week11_banner_good_phone.jpg" alt="Phone screenshot showing Good state banner with Why and Action">
+    <figcaption><em>Good</em> — Conditions safe. Keep an easy pace.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="../assets/images/week11_banner_caution_phone.jpg" alt="Phone screenshot showing Caution state banner with Why and Action">
+    <figcaption><em>Shorten route</em> — Heat/AQI up. Pick a shorter loop; plan water.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="../assets/images/week11_banner_alert_phone.jpg" alt="Phone screenshot showing Alert state banner with Why and Action">
+    <figcaption><em>Slow + water</em> — High heat/AQI. Slow down, shade, give water.</figcaption>
+  </figure>
+</div>
+
+<style>
+.img-row{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0}
+.img-row figure{flex:1 1 280px;margin:0}
+.img-row img{width:100%;height:auto;border-radius:8px}
+.img-row figcaption{font-size:.9rem;color:#4b5563;margin-top:6px}
+</style>
+
+
 Next (Week 12)
 
 Wire and flash the final test firmware; log CO₂/Temp → state.

@@ -72,10 +72,10 @@ This week I locked the build, captured the final footage, and exported the **Tas
 
 ## Reflection
 
-- The **glanceable LED** removed the need to stare at the phone; colours were readable even at jogging pace.  
-- The **expanded banner** (tap-to-open) worked better than auto-expanding.  
-- The **lower-chest mount** kept rigid parts away from the trachea and reduced bounce.  
-- For a next pass I would: add a tiny **“reason” blip** over BLE (for phone log), longer-life cell, and gasket for drizzle.
+- The glanceable LED removed the need to stare at the phone; colours were readable even at jogging pace.  
+- The expanded banner (tap-to-open) worked better than auto-expanding.  
+- The lower-chest mount kept rigid parts away from the trachea and reduced bounce.  
+- For a next pass I would: add a tiny “reason” blip over BLE (for phone log), longer-life cell, and gasket for drizzle.
 
 ---
 
